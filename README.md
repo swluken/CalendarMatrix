@@ -25,6 +25,8 @@ CalendarMatrix is an EXTJS 5.x component that extends Ext.picker.Date to provide
 <br>- DateMatrixPickerExtension.js
 <br>- CalendarMatrix.js  (see comments for config documentation; see CalendarMatrixDemo project for how to implement events "calendarselect", "monthselect" and "mouseover" and how to implement custom styling via CSS)
 
+<br>Sencha Forum thread:  http://www.sencha.com/forum/showthread.php?298088-CalendarMatrix-Component&p=1088490#post1088490
+
 <br>The equivalent Sencha Touch "CalendarPicker" component can be found at: 
 <br>https://github.com/swluken/TouchTreeGrid
 <br><b>CalendarPicker Demo</b><br>http://www.gomainerentals.com/Sencha/CalendarPicker/app.html
