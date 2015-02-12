@@ -1,0 +1,86 @@
+{
+    "name": "CalendarMatrixDemo",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost/CalendarMatrixDemo/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1124-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1152-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1123-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1137-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 75,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "cc7aa841-7ec1-4d2e-8db2-87567bb02b97",
+            "05e2489c-bf4d-4548-8160-3bdcd5e3c479",
+            "49dcdfd8-0a0b-4dfc-8ae3-a648359272df",
+            "28d4bae7-cf04-4c44-80df-cddad17ced17",
+            "2a0d5214-92eb-4e13-88dc-8687ebc06932",
+            "547a6483-6a20-492b-84c0-db987a9cdfa9",
+            "1cfd805c-c9e5-4b67-bfa9-468abf72dbd3",
+            "2ffec39b-a60a-4994-bb8f-082988a54ac6",
+            "9edbe16f-d681-424b-9df7-791533010ca9",
+            "ec5be8e8-6511-4cb1-9e00-834a3c732c16",
+            "58a40631-d680-4b6e-8dd9-dd283c80ebfd",
+            "a4de5508-9f79-4c10-8de1-95496e1a22f8",
+            "29ec4abc-7c03-494c-9cb3-dda04446358a",
+            "4235094c-8697-4bb6-80c7-fefb40a7ca9e",
+            "6977c5f8-beed-430e-a184-e6ca7b91960a",
+            "e4782be6-0ade-47c9-bb57-e14ef0898f7c",
+            "6094139d-82c8-493f-8316-51f3bdd2651b",
+            "d4c83cf3-be8e-4ccf-ac4f-a5b92f854731",
+            "bfe8dad1-86d1-4500-bd33-83db1cb4e5b9",
+            "8615eda4-0eb0-4fee-b5c0-923ba7e467e5",
+            "0e94a408-98d0-4f7e-acf7-ea26e816fa08"
+        ],
+        "store": [
+            "0fcd588c-9d24-4a90-bd00-2cea02e2a1c9",
+            "9209a534-81f3-49ee-8f5d-a50e64278c3e"
+        ],
+        "controller": [
+            "9cf45b85-422d-42a9-b31a-8d16c4c2c5f8"
+        ],
+        "model": [],
+        "resource": [
+            "a8229b9d-c734-495d-bf25-be79139c88f4",
+            "681b4ad1-f9d3-4ecb-aaed-02f1d3bc1e92",
+            "eeb79fc7-817c-4478-ac9d-81ad8db3acbd",
+            "01a5f48e-7f9a-46ae-8997-1f9073dfad6f",
+            "e69e40af-0907-4787-939c-3881aaeec86c",
+            "e8027d08-6717-4fa0-9923-9dcd92529fb1",
+            "860ccd06-783e-4a73-af05-2713b74d230b",
+            "0557f815-89f4-4507-a793-0cc3b3db7a91",
+            "8a015d1a-62d7-4e8a-a553-c82395cf3be1"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

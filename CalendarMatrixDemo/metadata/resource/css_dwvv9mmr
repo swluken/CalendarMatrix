@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_dwvv9mmr",
+        "url": "./resources/css/TrivagoOverrides.css"
+    },
+    "name": "css3",
+    "designerId": "860ccd06-783e-4a73-af05-2713b74d230b"
+}

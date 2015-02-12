@@ -1,0 +1,144 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "matrixex5",
+        "designer|userClassName": "MatrixEx5ViewController"
+    },
+    "name": "MatrixEx4ViewController1",
+    "designerId": "8615eda4-0eb0-4fee-b5c0-923ba7e467e5",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "calendarMatrix",
+                    "selDt",
+                    "selDate",
+                    "selVal"
+                ],
+                "fn": "handleSelect",
+                "implHandler": [
+                    "var me=this,",
+                    "    rangeDt1 = calendarMatrix.rangeDt1,",
+                    "    rangeDt2 = calendarMatrix.rangeDt2,",
+                    "    rangeSelectMode = calendarMatrix.getRangeSelectMode();",
+                    "",
+                    "if (rangeSelectMode==='startdate'){",
+                    "    me.updCheckInDate(selDate);",
+                    "    if (Ext.isEmpty(rangeDt2)){ // default enddate to next day",
+                    "        calendarMatrix.rangeDate2 = Ext.Date.add(selDate, Ext.Date.DAY, 1);",
+                    "        calendarMatrix.rangeDt2 = Ext.Date.format(calendarMatrix.rangeDate2, \"Y-m-d\");",
+                    "    }",
+                    "    // auto-select end date button and redisplay calendar to accept end date",
+                    "    me.checkOutBtnClick(me.lookupReference('checkOutBtn2'));",
+                    "}",
+                    "else if (rangeSelectMode==='enddate'){",
+                    "    me.updCheckOutDate(selDate);",
+                    "    if (Ext.isEmpty(rangeDt1)){ // default startdate to prior day",
+                    "        calendarMatrix.rangeDate1 = Ext.Date.add(selDate, Ext.Date.DAY, -1);",
+                    "        calendarMatrix.rangeDt1 = Ext.Date.format(calendarMatrix.rangeDate1, \"Y-m-d\");",
+                    "    }",
+                    "    // auto-select start date button and redisplay calendar to accept start date",
+                    "    me.checkInBtnClick(me.lookupReference('checkInBtn2'));",
+                    "}"
+                ]
+            },
+            "name": "handleSelect",
+            "designerId": "0b6e36b4-b37a-4dd6-9d1a-ffebb9618571"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "myBtn"
+                ],
+                "fn": "checkInBtnClick",
+                "implHandler": [
+                    "var matrix = this.getView().down('#matrixEx5Cal');",
+                    "matrix.setRangeSelectMode('startdate');",
+                    "matrix.dispCalGrid();",
+                    "myBtn.addCls('selected');",
+                    "this.lookupReference('checkOutBtn2').removeCls('selected');"
+                ]
+            },
+            "name": "checkInBtnClick",
+            "designerId": "ebb275e4-dbcc-49a8-ab38-e6c710ca9481"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "myBtn"
+                ],
+                "fn": "checkOutBtnClick",
+                "implHandler": [
+                    "var matrix = this.getView().down('#matrixEx5Cal');",
+                    "matrix.setRangeSelectMode('enddate');",
+                    "matrix.dispCalGrid();",
+                    "myBtn.addCls('selected');",
+                    "this.lookupReference('checkInBtn2').removeCls('selected');"
+                ]
+            },
+            "name": "checkOutBtnClick",
+            "designerId": "53b18833-c602-4e4a-aaf3-29207fae7391"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "selDate"
+                ],
+                "fn": "updCheckInDate",
+                "implHandler": [
+                    "this.lookupReference('checkInBtn2Date').update(Ext.Date.format(selDate, \"l\")+', '+Ext.Date.format(selDate, \"m/d/y\"));"
+                ]
+            },
+            "name": "updCheckInDate",
+            "designerId": "077a08cc-8882-4cbe-8f7a-1532c5653db9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "selDate"
+                ],
+                "fn": "updCheckOutDate",
+                "implHandler": [
+                    "this.lookupReference('checkOutBtn2Date').update(Ext.Date.format(selDate, \"l\")+', '+Ext.Date.format(selDate, \"m/d/y\"));"
+                ]
+            },
+            "name": "updCheckOutDate",
+            "designerId": "507f0a49-7e78-469b-bbba-3bd23d9a8310"
+        }
+    ]
+}

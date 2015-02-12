@@ -1,0 +1,108 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "matrixex2",
+        "designer|userClassName": "MatrixEx2ViewController"
+    },
+    "name": "MatrixEx1ViewController1",
+    "designerId": "6094139d-82c8-493f-8316-51f3bdd2651b",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#matrixEx2Cal",
+                "designer|params": [
+                    "matrix, selDt, selDate, selVal"
+                ],
+                "designer|targetType": "Ext.container.Container",
+                "fn": "onCalendarMatrixSelect",
+                "implHandler": [
+                    "var dts = Ext.Array.sort(Ext.Array.pluck(matrix.selectedDts, 'selectedDt'));",
+                    "this.lookupReference('selectedCont').update(dts.join(', '));"
+                ],
+                "name": "calendarselect",
+                "scope": "me"
+            },
+            "name": "onCalendarMatrixSelect",
+            "designerId": "d14b6f4c-7425-4fd0-8de5-4e9def4f3372"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#matrixEx2Cal",
+                "designer|params": [
+                    "calendar, minDate, maxDate"
+                ],
+                "designer|targetType": "Ext.container.Container",
+                "fn": "onMonthSelect",
+                "implHandler": [
+                    "// Sample Controller Action to listen to monthselect event"
+                ],
+                "name": "monthselect",
+                "scope": "me"
+            },
+            "name": "onMonthSelect",
+            "designerId": "b4bf7c63-9def-4b5f-901f-dcbd40c23339"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#matrixEx2Cal",
+                "designer|params": [
+                    "calendar, thisDate"
+                ],
+                "designer|targetType": "Ext.container.Container",
+                "fn": "onDateMouseOver",
+                "implHandler": [
+                    "// Sample Controller Action to listen to mouseover event",
+                    ""
+                ],
+                "name": "mouseover",
+                "scope": "me"
+            },
+            "name": "onDateMouseOver",
+            "designerId": "db143e45-6fed-4a4b-ad6b-a3e404ef0d08"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#resetBtn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onResetBtnClick",
+                "implHandler": [
+                    "this.getView().down('#matrixEx2Cal').resetMatrix();",
+                    "this.lookupReference('selectedCont').update('');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onResetBtnClick",
+            "designerId": "2b8102ba-51c2-46f7-b75f-64e4ba5dde47"
+        }
+    ]
+}

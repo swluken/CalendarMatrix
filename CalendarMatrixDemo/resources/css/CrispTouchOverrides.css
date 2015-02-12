@@ -1,0 +1,230 @@
+/* Following copied from \ext-5.1.0\packages\ext-theme-crisp-touch\build\resources\ext-theme-crisp-touch-all-debug_01.css  */
+
+/* line 1, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker {
+    position: relative; }
+/* line 4, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker .x-monthpicker {
+    left: 0;
+    top: 0;
+    display: block; }
+/* line 11, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker .x-monthpicker-months,
+.matrix-ex3-cal .x-datepicker .x-monthpicker-years {
+    height: 100%; }
+
+/* line 16, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-inner {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate; }
+
+/* line 22, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-cell {
+    padding: 0; }
+
+/* line 26, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-header {
+    position: relative; }
+
+/* line 30, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-arrow {
+    position: absolute;
+    outline: none;
+    font-size: 0; }
+
+/* line 36, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-column-header {
+    padding: 0; }
+
+/* line 40, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-date {
+    display: block;
+    text-decoration: none; }
+/* line 82, ../../../ext-theme-base/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker .x-monthpicker-buttons {
+    position: absolute;
+    bottom: 0; }
+/* line 9, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e1e1e1;
+    background-color: white;
+    width: 282px; }
+
+/* line 19, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-header {
+    padding: 7px 6px;
+    text-align: center;
+    background-image: none;
+    background-color: #f5f5f5; }
+
+/* line 32, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-arrow {
+    width: 32px;
+    height: 32px;
+    top: 6px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    background-color: #f5f5f5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7; }
+
+/* line 51, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal div.x-datepicker-arrow:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+/* line 56, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-next {
+    right: 6px;
+    background: url(arrow-right.png) no-repeat center center; }
+
+/* line 61, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-prev {
+    left: 6px;
+    background: url(arrow-left.png) no-repeat center center; }
+
+/* line 77, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-month .x-btn,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-tc,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-tl,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-tr,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-mc,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-ml,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-mr,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-bc,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-bl,
+.matrix-ex3-cal .x-datepicker-month .x-btn .x-btn-br {
+    background: transparent;
+    border-width: 0 !important; }
+/* line 84, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-month .x-btn-inner {
+    color: #3892d3; }
+/* line 89, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-month .x-btn-split-right:after, .x-datepicker-month .x-btn-over .x-btn-split-right:after {
+    background-image: url(month-arrow.png);
+    padding-right: 24px; }
+/* line 94, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-month .x-btn-over {
+    border-color: transparent; }
+
+/* line 99, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-column-header {
+    width: 40px;
+    color: black;
+    font: 300 15px helvetica, arial, verdana, sans-serif;
+    text-align: right;
+    background-image: none;
+    background-color: white; }
+
+/* line 118, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-column-header-inner {
+    line-height: 32px;
+    padding: 0 9px 0 0; }
+
+/* line 123, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-cell {
+    text-align: right;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white; }
+
+/* line 133, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-date {
+    padding: 0 11px 0 0;
+    font: 300 15px helvetica, arial, verdana, sans-serif;
+    color: black;
+    cursor: pointer;
+    line-height: 30px; }
+
+/* line 143, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal div.x-datepicker-date:hover {
+    color: black;
+    background-color: #eaf3fa; }
+
+/* line 148, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-selected {
+    border-style: solid;
+    border-color: #3892d3; }
+/* line 151, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.x-datepicker-selected .x-datepicker-date {
+    background-color: #d6e8f6;
+    font-weight: 300; }
+
+/* line 157, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-today {
+    border-color: darkred;
+    border-style: solid; }
+
+/* line 164, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-prevday .x-datepicker-date,
+.matrix-ex3-cal .x-datepicker-nextday .x-datepicker-date {
+    color: #bfbfbf; }
+
+/* line 171, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-disabled .x-datepicker-date {
+    background-color: #eeeeee;
+    cursor: default;
+    color: gray; }
+
+/* line 179, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-disabled div.x-datepicker-date:hover {
+    background-color: #eeeeee;
+    color: gray; }
+
+/* line 185, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-footer,
+.matrix-ex3-cal .x-monthpicker-buttons {
+    padding: 6px 0;
+    background-image: none;
+    background-color: #f5f5f5;
+    text-align: center; }
+/* line 201, ../../../ext-theme-neutral/sass/src/picker/Date.scss */
+.matrix-ex3-cal .x-datepicker-footer .x-btn,
+.matrix-ex3-cal .x-monthpicker-buttons .x-btn {
+    margin: 0 3px 0 2px; }
+/* line 83, ../../../ext-theme-base/sass/etc/mixins/slicer.scss */
+.matrix-ex3-cal .x-cmd-slicer.x-datepicker-header:before {
+    display: none;
+    content: "x-slicer:stretch:bottom" !important; }
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+/* line 83, ../../../ext-theme-base/sass/etc/mixins/slicer.scss */
+.matrix-ex3-cal .x-cmd-slicer.x-datepicker-footer:before {
+    display: none;
+    content: "x-slicer:stretch:bottom" !important; }
+
+
+
+
+
+/* line 435, ../../../ext-theme-neutral/sass/src/button/Button.scss */
+.matrix-ex3-cal .x-btn-inner-default-small {
+    font: 300 15px/20px helvetica, arial, verdana, sans-serif;
+    color: white;
+    padding: 0 6px;
+    max-width: 100%; }
+/* line 187, ../../../ext-theme-base/sass/etc/mixins/frame.scss */
+.matrix-ex3-cal .x-btn-default-small {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px 4px 3px 4px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #3892d3; }
+/* line 423, ../../../ext-theme-neutral/sass/src/button/Button.scss */
+.matrix-ex3-cal .x-btn-default-small {
+    border-color: #157fcc; }
+/* line 47, ../../../ext-theme-base/sass/src/button/Button.scss */
+.matrix-ex3-cal .x-btn-inner {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis; }    

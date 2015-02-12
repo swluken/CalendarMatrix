@@ -1,0 +1,185 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "myviewport",
+        "designer|userClassName": "MyViewport",
+        "layout": "fit",
+        "scrollable": null
+    },
+    "name": "MyViewport",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "cc7aa841-7ec1-4d2e-8db2-87567bb02b97",
+    "viewControllerInstanceId": "49dcdfd8-0a0b-4dfc-8ae3-a648359272df",
+    "viewModelInstanceId": "05e2489c-bf4d-4548-8160-3bdcd5e3c479",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "height": null,
+                "itemId": "mytabpanel",
+                "removePanelHeader": false,
+                "width": null
+            },
+            "name": "MyTabPanel",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "ed3c79a9-b3f8-4543-8151-830313f83fed",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 289,
+                        "title": "Matrix"
+                    },
+                    "name": "matrixex1",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "4ac9b8f3-e959-4876-8f13-96753c381313",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "28d4bae7-cf04-4c44-80df-cddad17ced17"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Multi-Select"
+                    },
+                    "name": "matrixex2",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "12c42eff-b204-42f2-89e5-48ddcd01ff53",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "2a0d5214-92eb-4e13-88dc-8687ebc06932"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Single Select"
+                    },
+                    "name": "matrixex3",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "13db701f-b9cd-4505-980d-3a778ceceadc",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "9edbe16f-d681-424b-9df7-791533010ca9"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Range #1"
+                    },
+                    "name": "matrixex4",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "7a3351fc-516a-4891-94c2-17bd0416d2dc",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "547a6483-6a20-492b-84c0-db987a9cdfa9"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Range #2"
+                    },
+                    "name": "matrixex5",
+                    "designerId": "4f004ae3-f9f5-49bb-941f-55fc23410b19",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "2ffec39b-a60a-4994-bb8f-082988a54ac6"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Range #3"
+                    },
+                    "name": "matrixex6",
+                    "designerId": "75a680ad-89dc-4e90-930a-28847f8acf61",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "1cfd805c-c9e5-4b67-bfa9-468abf72dbd3"
+                }
+            ]
+        }
+    ]
+}

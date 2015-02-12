@@ -1,0 +1,648 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fontawesome-webfont.eot?v=4.0.3');
+    src: url('fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
+        url('fontawesome-webfont.woff?v=4.0.3') format('woff'),
+        url('fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
+        url('fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.fa-icon-remove:before{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    text-align:center;
+    padding-top: 15px;
+    font-size: 24px;
+    color: #eee;
+    font-family:"FontAwesome";
+    content:"\f00d"
+}
+
+
+
+/*********************  MatrixEx1:  Options Calendar *********************/
+.holiday {
+    background: url(cal-holiday.png) no-repeat center !important;        /* Images must be stored in ./resources/css/ directory as referenced */
+}
+.stopTrading {
+    background: url(cal-stop-trading.png) no-repeat center !important;        
+}
+.optionsExpire {
+    background: url(cal-expiration.png) no-repeat center !important;        
+}
+.quarterlyExpiration {
+    background: url(cal-quarterly-expiration.png) no-repeat center !important;    
+}
+
+.matrix-ex1-cal .holiday .x-datepicker-date,
+.matrix-ex1-cal .stopTrading .x-datepicker-date,
+.matrix-ex1-cal .optionsExpire .x-datepicker-date,
+.matrix-ex1-cal .quarterlyExpiration .x-datepicker-date{
+    font-weight: bold; 
+}
+.calendar-matrix-legend{
+    border: solid #3892D3;
+    border-width: 1px 1px 0 1px;
+}
+.legend-span{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+}
+.legend-cls{
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    margin: 2px 5px;
+    background-size: 80% !important;
+}
+
+.matrix-ex1-cal .legend-legend{
+    font-weight: bold;
+    margin-top: 7px;
+    width: 189px;  /* 226 total per col less 27px legend-cls width+margins less 10px matrix margins */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*********************  MatrixEx2:  Options Calendar *********************/
+
+.matrix-ex2-cal .holiday .x-datepicker-date,
+.matrix-ex2-cal .stopTrading .x-datepicker-date,
+.matrix-ex2-cal .optionsExpire .x-datepicker-date,
+.matrix-ex2-cal .quarterlyExpiration .x-datepicker-date{
+    font-weight: bold; 
+}
+
+.matrix-ex2-cal .matrix-cal-selected .x-datepicker-date:hover{
+    background-color: #3892D3;
+    color: white;
+}
+.matrix-ex2-cal .cal-grid .x-datepicker-prevday .x-datepicker-date{ 
+    background-color: transparent;
+    color: transparent; 
+}
+
+.matrix-ex2-cal .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{
+    background-color: white; 
+    color: white;
+    border: none;
+    cursor: default;
+}
+
+.matrix-ex2-cal .legend-legend{
+    font-weight: bold;
+    margin-top: 7px;
+    width: 189px;  /* 226 total per col less 27px legend-cls width+margins less 10px matrix margins */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.matrix-ex2-cal .fa-icon-remove:before{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: #3892D3;
+}
+
+
+/*********************  MatrixEx3:  CRISP-TOUCH STYLE CALENDAR *********************/
+
+.matrix-ex3-cal .matrix-cal{
+    border: none;
+}
+
+.matrix-ex3-cal .cal-grid-today-btn{
+    width: 120px;
+}
+.matrix-ex3-cal .cal-grid-toolbar{
+    margin-bottom: -8px;
+    padding-top: 5px;
+    height: 45px;
+    /*   top: 10px;
+    left: 0px;
+    z-Index: 200;  */
+}
+
+.matrix-ex3-cal .cal-grid-prior-btn{
+    width: 40px;
+    margin-right: 10px;   
+}
+.matrix-ex3-cal .cal-grid-next-btn{
+    width: 40px;
+    margin-right: 10px;    
+}
+.matrix-ex3-cal .daycount-inner{
+    line-height: 10px;
+    margin-right: -10px;
+    margin-top: -8px;
+    font-size: 10px;
+    color: #921ede;
+}
+
+.matrix-ex3-cal .cal-grid .x-datepicker-prevday .x-datepicker-date{ 
+    background-color: transparent;
+    color: transparent; 
+}
+.matrix-ex3-cal .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{
+    background-color: white; 
+    color: white;
+    border:none;
+    cursor: default;
+}
+.matrix-ex3-cal .weekend .x-datepicker-date{
+    color: #D37938;
+    font-weight: bold;
+}
+.matrix-ex3-cal .matrix-cal-selected .x-datepicker-date,
+.matrix-ex3-cal .matrix-cal-selected .x-datepicker-date:hover{
+    background-color: #3892D3;
+    color: white;
+}
+.matrix-ex3-cal .button {
+    background: #f2f2f2; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #f2f2f2 0%, #cccccc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f2f2f2 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f2f2f2 0%,#cccccc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f2f2f2 0%,#cccccc 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f2f2f2 0%,#cccccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+
+    border: 1px solid gray; 
+    border-radius: 4px;   
+    -webkit-box-shadow: 0px 5px 0 5px rgba(0, 0, 0, 0.3);
+}
+.matrix-ex3-cal .button-dayname-month{
+    padding-left: 5px;
+    font-size: 15px;
+}
+.matrix-ex3-cal .button-day {
+    padding-left: 10px;
+    font-size: 28px !important; 
+}
+.matrix-ex3-cal .button-year{
+    padding-left: 5px;
+    font-size: 18px !important; 
+    font-weight: normal;
+}
+
+.matrix-ex3-cal .button-select {
+    text-align: left;
+    padding-top: 10px;
+    font-size: 16px; 
+    font-weight: bold;    
+}
+
+/*********************  MatrixEx4:  TRIP ADVISOR SIMULATION *********************/
+.matrix-ex4-cal .matrix-cal{
+    border: none;
+}
+.matrix-ex4-cal .cal-grid{
+    margin: 0px;
+}
+.matrix-ex4-cal .cal-grid-toolbar{
+    margin-bottom: 0px;
+    padding-top: 0px; 
+    height: 35px;
+    top: 10px;
+    left: 0px;
+    z-Index: 200;  
+    position: absolute;
+}
+.matrix-ex4-cal .x-datepicker-month .x-btn-inner{
+    color: #2C2C2C;
+}
+.matrix-ex4-cal .x-datepicker-column-header{
+    font-weight: bold;
+}
+
+.matrix-ex4-cal .date-input-selected{
+    border-color: #99CC66 !important;
+    border-width: 2px !important;
+    background-color: #EEE !important;
+}
+.matrix-ex4-cal .x-btn-button-plain-small {
+    height: 35px;
+    width: 100px;
+    line-height: 100%;
+    padding-bottom: 20px;
+
+}
+.matrix-ex4-cal .find-btn{    
+    background-color: #99CC66;
+}
+.matrix-ex4-cal .find-btn .x-btn-inner-plain-small,
+.matrix-ex4-cal .find-btn .x-btn-button-plain-small{
+    width: 65px !important;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.matrix-ex4-cal .x-btn-inner-plain-small{
+    font-family: Arial, Tahoma, 'Bitstream Vera Sans', sans-serif;
+    color: #2C2C2C;    
+    font-size: 16px;
+}
+.matrix-ex4-cal .calendar-img{
+    background: url('../images/calendar-icon.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+    margin-left: 10px;     
+}    
+
+.matrix-ex4-cal .cal-grid-prior-btn{
+    background: url('../images/TripAdvisorIcons.png') 0% -103px;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;    
+}
+.matrix-ex4-cal .cal-grid-next-btn{
+    background: url('../images/TripAdvisorIcons.png') 0% -140px;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;    
+}
+.matrix-ex4-cal .x-datepicker-cell{
+    border-width: 0px;
+}
+
+.matrix-ex4-cal .cal-grid .x-datepicker-prevday .x-datepicker-date{ 
+    background-color: transparent;
+    color: transparent; 
+}
+.matrix-ex4-cal .cal-grid  .x-datepicker-date:hover{
+    background-color: #99CC66;  
+    color: white;
+    cursor: pointer;
+}
+.matrix-ex4-cal .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{
+    background-color: white; 
+    cursor: default;
+}
+.matrix-ex4-cal .cal-grid .x-datepicker-date{
+    padding: 0 8px 0 0;  /* demo how to adjust line up with day of week labels */
+}
+
+.matrix-ex4-cal .matrix-cal-startdt .x-datepicker-date{
+    background: url("../images/triangleLeft.png") no-repeat scroll right top;
+}
+.matrix-ex4-cal .matrix-cal-enddt .x-datepicker-date{
+    background: url("../images/triangleRight.png") no-repeat scroll left top;
+}
+
+/* SELECTED COLORS MUST BE AFTER PRIOR COLOR CLS ... and have matching attribute defs */
+.matrix-ex4-cal .matrix-cal-selected .x-datepicker-date{
+    background-color: #E3E3E3;
+    color: black;
+    font-weight: bold;
+}
+.matrix-ex4-cal .matrix-cal-startdt .x-datepicker-date,
+.matrix-ex4-cal .matrix-cal-enddt .x-datepicker-date{
+    background-color: #AAA;
+    color: white;
+}
+
+/*********************  MatrixEx5:  TRIVAGO SIMULATION *********************/
+.matrix-ex5-cal .matrix-cal{
+    border: none;
+}
+.matrix-ex5-cal .cal-grid{
+    margin: 0px 50px 0px 0px;
+}
+
+.matrix-ex5-cal .cal-grid-toolbar{
+    margin-bottom: 0px;
+    padding-top: 0px; 
+    height: 35px;
+    top: 10px;
+    left: 0px;
+    z-Index: 200;  
+    position: absolute;
+}
+
+.matrix-ex5-cal .x-datepicker-column-header{
+    font-weight: normal;
+}
+
+.matrix-ex5-cal .cal-grid-prior-btn{
+    background: url('../images/trv-left-arrow.png');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 14px;    
+}
+.matrix-ex5-cal .cal-grid-next-btn{
+    background: url('../images/trv-right-arrow.png');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 14px;    
+}
+.matrix-ex5-cal .cal-grid .x-datepicker-prevday .x-datepicker-date{ 
+    background-color: transparent;
+    color: transparent; 
+}
+.matrix-ex5-cal .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{
+    background-color: white; 
+    color: white;
+    cursor: default;
+}
+
+.matrix-ex5-cal .check-in-btn2{
+    font-size: 14px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, Sans, sans-serif, 'Sans Serif';   
+    color: #444444;
+    border: 1px solid #444444;
+    border-left-color: #2973B8;
+    border-radius: 4px;
+    border-left-width: 6px;
+}
+.matrix-ex5-cal .check-in-btn2.selected,
+.matrix-ex5-cal .check-in-btn2:hover{
+    color: #2973B8;    
+    border-color: #2973B8;
+}
+.matrix-ex5-cal .check-in-btn2-label{
+    line-height: 14px;
+    font-size:12px;
+    margin-top: 4px;
+    padding-left: 8px;
+}
+.matrix-ex5-cal .check-in-btn2-date{
+    font-weight: bold;
+    padding-left: 8px;
+    font-size: 13px;
+}
+
+.matrix-ex5-cal .check-out-btn2{
+    font-size: 14px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, Sans, sans-serif, 'Sans Serif';   
+    color: #444444;
+    border: 1px solid #444444;
+    border-left-color: #E37A1F;
+    border-radius: 4px;
+    border-left-width: 6px;
+}
+.matrix-ex5-cal .check-out-btn2.selected,
+.matrix-ex5-cal .check-out-btn2:hover{
+    color: #E37A1F;    
+    border-color: #E37A1F;
+}
+
+.matrix-ex5-cal .fa-icon-remove:before{
+    padding: 14px 0px 0px 0px;
+    margin: 5px 0px;
+    color: #bebebe;
+    border: 1px solid #eeeeee;
+}
+.matrix-ex5-cal .fa-icon-remove:hover:before{
+    color: #2973B8;
+    border-color: #bebebe;
+}
+
+.matrix-ex5-cal .x-datepicker-cell{
+    height: 36px;  /* counters -1px margin */
+}
+
+.matrix-ex5-cal .enddate-mode div.x-datepicker-date:hover {
+    background-color: #E58735; 
+}
+
+
+.matrix-ex5-cal .x-datepicker-disabled .x-datepicker-date {
+  background-color: white;
+  cursor: default;
+  color: #aaaaaa; }
+
+.matrix-ex5-cal .x-datepicker-disabled div.x-datepicker-date:hover {
+  background-color: white;
+  color: #aaaaaa; }
+
+
+.matrix-ex5-cal .weekend .x-datepicker-date{
+    background-color: #F6F6F6;
+    border-width: 0px;
+}
+.matrix-ex5-cal .x-datepicker-disabled.weekend div.x-datepicker-date:hover {
+    background-color: #F6F6F6;
+}
+
+.matrix-ex5-cal .matrix-cal-selected .x-datepicker-date {
+    border: 1px solid #AAA;
+    background-color: white;
+    color: #333333;
+    line-height: 35px;  
+    font-weight: bold;
+    margin: -2px -1px -1px -1px;
+}
+.matrix-ex5-cal .matrix-cal-selected.weekend0.x-datepicker-cell .x-datepicker-date{
+    margin: -2px -1px -1px 0px ;
+}
+.matrix-ex5-cal .matrix-cal-selected.weekend6.x-datepicker-cell .x-datepicker-date{
+    margin: -2px 0px -1px -1px ;
+}
+
+.matrix-ex5-cal .matrix-cal-startdt .x-datepicker-date {
+    background-color: white;
+    border: 1px solid #2973B8 !important; 
+    line-height: 35px;
+    margin: -2px -1px -1px -1px ;
+}
+.matrix-ex5-cal .matrix-cal-enddt .x-datepicker-date {
+    background-color: white;
+    border: 1px solid #E37A1F !important;    
+    line-height: 35px;
+    margin: -2px 0px -1px -1px ;
+}
+
+/* http://css-tricks.com/snippets/css/css-triangle/ */
+.matrix-ex5-cal .matrix-cal-startdt .x-datepicker-date::before {
+    height: 0;
+    width: 0;
+    content: "\00a0";
+    display: block;
+    margin-left: 13px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #2973B8 transparent transparent transparent;
+    position: absolute;
+}
+.matrix-ex5-cal .matrix-cal-enddt .x-datepicker-date::before {
+    height: 0;
+    width: 0;
+    content: "\00a0";
+    display: block;
+    margin-left: 13px;
+    margin-top: 29px;
+    border-width: 0px 6px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent #E37A1F transparent ;
+    position: absolute;
+}
+
+
+/*********************  MatrixEx6:  EXPEDIA SIMULATION *********************/
+
+.matrix-ex6-cal .fa-icon-chevron-sign-right:before{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    text-align:center;
+    padding-top: 18px;
+    font-size: 36px;
+    color: #006CC4;
+    font-weight: bold;
+    font-family:"FontAwesome";
+    content:"\f138"
+}
+
+.matrix-ex6-cal .fa-icon-chevron-sign-left:before{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    text-align:center;
+    padding-top: 18px;
+    font-size: 36px;
+    color: #006CC4;
+    font-weight: bold;    
+    font-family:"FontAwesome";
+    content:"\f137"
+}
+.matrix-ex6-cal .fa-icon-chevron-sign-right:hover:before,
+.matrix-ex6-cal .fa-icon-chevron-sign-left:hover:before{
+    color: #0087f5;
+}
+.matrix-ex6-cal .fa-icon-calendar:before{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin: 20px 0px 0px 5px;
+    text-align:left;
+    font-size: 18px;
+    color: #C7C7C7;
+    font-family:"FontAwesome";
+    content:"\f073"
+}
+.matrix-ex6-cal .date-input-selected .fa-icon-calendar:before{
+    color: #0087f5;
+}
+
+.matrix-ex6-cal .inputBtn .x-btn-inner-plain-small{
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    color: #1F1F1F;    
+    font-size: 15px;
+    line-height: 100%;
+}
+.matrix-ex6-cal .inputBtn {
+    border: 1px solid #C7C7C7;
+    border-radius: 4px;
+}
+.matrix-ex6-cal .inputBtn.date-input-selected{
+    border-color: #0087f5 !important;
+    border-width: 3px !important;
+}
+.matrix-ex6-cal .inputBtn.date-input-selected .x-btn-inner-plain-small{
+    color: #0087f5;
+}
+
+.matrix-ex6-cal .find-btn{    
+    background-color: #ffcb00;
+    border-radius: 4px;
+}
+.matrix-ex6-cal .find-btn .x-btn-inner-plain-small,
+.matrix-ex6-cal .find-btn .x-btn-button-plain-small{
+    font-family: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    color: #3D3100;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 100%;
+}
+
+.matrix-ex6-cal .matrix-cal{
+    border: none;
+}
+
+.matrix-ex6-cal .cal-grid{
+    margin: 0px;
+}
+.matrix-ex6-cal .cal-grid-card{
+    border-width: 0 0 0 3px ;
+    border-style: solid;
+    border-color: #0087f5;
+}
+.matrix-ex6-cal .x-datepicker {
+  border-width: 3px 3px 3px 0px !important;
+  border-style: solid;
+  border-color: #0087f5;
+  background-color: white;
+  width: 236px; }
+
+
+.matrix-ex6-cal .cal-grid-toolbar{
+    margin-bottom: 0px;
+    padding-top: 0px; 
+    height: 35px;
+    top: 10px;
+    left: 0px;
+    z-Index: 200;  
+    position: absolute;
+}
+
+.matrix-ex6-cal .x-datepicker-month .x-btn-inner{
+    color: #1F1F1F;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 24px 0px 12px 0px;
+}
+
+.matrix-ex6-cal .x-datepicker-cell{
+    border-width: 0px;
+}
+
+.matrix-ex6-cal .cal-grid .x-datepicker-prevday .x-datepicker-date{ 
+    background-color: transparent;
+    color: transparent; 
+}
+.matrix-ex6-cal .cal-grid  .x-datepicker-date:hover{
+    background-color: #0087f5;  
+    color: #ffffff;
+    cursor: pointer;
+}
+.matrix-ex6-cal .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{
+    background-color: white; 
+    cursor: default;
+}
+
+
+/* SELECTED COLORS MUST BE AFTER PRIOR COLOR CLS ... and have matching attribute defs */
+.matrix-ex6-cal .matrix-cal-selected .x-datepicker-date{
+    background-color: #D1EAFF;
+    color: #0065B8;
+    font-weight: normal;
+}
+.matrix-ex6-cal .matrix-cal-startdt .x-datepicker-date,
+.matrix-ex6-cal .matrix-cal-enddt .x-datepicker-date{
+    background-color: #00355F;
+    color: white;
+}
+

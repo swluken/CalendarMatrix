@@ -1,0 +1,272 @@
+.matrix-ex5-cal .x-datepicker {
+  position: relative; }
+.matrix-ex5-cal   .x-datepicker .x-monthpicker {
+    left: 0;
+    top: 0;
+    display: block; }
+  .x-datepicker .x-monthpicker-months,
+  .x-datepicker .x-monthpicker-years {
+    height: 100%; }
+
+.matrix-ex5-cal .x-datepicker-inner {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate; }
+
+.matrix-ex5-cal .x-datepicker-cell {
+  border-width: 0px;
+  padding: 0; }
+
+.matrix-ex5-cal .x-datepicker-header {
+  position: relative; }
+
+.matrix-ex5-cal .x-datepicker-arrow {
+  position: absolute;
+  outline: none;
+  font-size: 0; }
+
+.matrix-ex5-cal .x-datepicker-column-header {
+  padding: 0; }
+
+.matrix-ex5-cal .x-datepicker-date {
+  display: block;
+  text-decoration: none; }
+
+.matrix-ex5-cal .x-monthpicker {
+  display: table; }
+
+.matrix-ex5-cal .x-monthpicker-body {
+  height: 100%;
+  position: relative; }
+
+.matrix-ex5-cal .x-monthpicker-months,
+.matrix-ex5-cal .x-monthpicker-years {
+  float: left; }
+
+.matrix-ex5-cal .x-monthpicker-item {
+  float: left; }
+
+.matrix-ex5-cal .x-monthpicker-item-inner {
+  display: block;
+  text-decoration: none; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-button-ct {
+  float: left;
+  text-align: center; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-button {
+  display: inline-block;
+  outline: none;
+  font-size: 0; }
+
+.matrix-ex5-cal .x-monthpicker-buttons {
+  width: 100%; }
+
+.matrix-ex5-cal .x-datepicker .x-monthpicker-buttons {
+  position: absolute;
+  bottom: 0; }
+.matrix-ex5-cal .x-datepicker {
+  border-style: solid;
+  border-color: white;
+  background-color: white;
+  width: 273px; }
+
+.matrix-ex5-cal .x-datepicker-header {
+  padding: 7px 6px;
+  text-align: center;
+  background-image: none;
+  background-color: white; }
+
+.matrix-ex5-cal .x-datepicker-arrow {
+  width: 32px;
+  height: 32px;
+  top: 6px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7; }
+
+.matrix-ex5-cal div.x-datepicker-arrow:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.matrix-ex5-cal .x-datepicker-next {
+  right: 6px;
+  background: none; }
+
+.matrix-ex5-cal .x-datepicker-prev {
+  left: 6px;
+  background: none; }
+
+.matrix-ex5-cal .x-datepicker-month .x-btn,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-tc,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-tl,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-tr,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-mc,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-ml,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-mr,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-bc,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-bl,
+.matrix-ex5-cal .x-datepicker-month .x-btn .x-btn-br {
+  background: transparent;
+  border-width: 0 !important; }
+
+.matrix-ex5-cal .x-datepicker-month .x-btn-inner {
+    color: #444444; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.matrix-ex5-cal .x-datepicker-month .x-btn-split-right:after, .matrix-ex5-cal .x-datepicker-month .x-btn-over .x-btn-split-right:after {
+  background-image: none;
+  padding-right: 0px; }
+.matrix-ex5-cal .x-datepicker-month .x-btn-over {
+  border-color: transparent; }
+
+.matrix-ex5-cal .x-datepicker-column-header {
+    width: 39px;
+    color: #444;
+    font: normal 14px helvetica, arial, verdana, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    background-image: none;
+    background-color: white; 
+}
+
+.matrix-ex5-cal .x-datepicker-column-header-inner {
+  line-height: 36px;
+  padding: 0; }
+
+.matrix-ex5-cal .x-datepicker-cell {
+  text-align: center; }
+
+.matrix-ex5-cal .x-datepicker-date {
+  padding: 0;
+  font: 300 14px helvetica, arial, verdana, sans-serif;
+  color: #333333;
+  cursor: pointer;
+  line-height: 36px; }
+
+.matrix-ex5-cal div.x-datepicker-date:hover {
+  color: #333333;
+  background-color: #52acff; }
+
+.matrix-ex5-cal .x-datepicker-selected {
+  border-style: solid;
+  border-color: #333333; }
+.matrix-ex5-cal   .x-datepicker-selected .x-datepicker-date {
+    background-color: white;
+    font-weight: 300; }
+
+.matrix-ex5-cal .x-datepicker-today {
+  border: none;}
+
+.matrix-ex5-cal .x-datepicker-prevday .x-datepicker-date,
+.x-datepicker-nextday .x-datepicker-date {
+  color: white; }
+
+.matrix-ex5-cal .x-datepicker-footer,
+.matrix-ex5-cal .x-monthpicker-buttons {
+  padding: 6px 0;
+  background-image: none;
+  background-color: white;
+  text-align: center; }
+  .x-datepicker-footer .x-btn,
+  .x-monthpicker-buttons .x-btn {
+    margin: 0 3px 0 2px; }
+
+.matrix-ex5-cal .x-monthpicker {
+  width: 273px;
+  border-style: solid;
+  border-color: white;
+  background-color: white; }
+
+.matrix-ex5-cal .x-monthpicker-months {
+  border-width: 0 1px 0 0;
+  border-color: white;
+  border-style: solid;
+  width: 136px; }
+.matrix-ex5-cal   .x-monthpicker-months .x-monthpicker-item {
+    width: 67px; }
+
+.matrix-ex5-cal .x-monthpicker-years {
+  width: 137px; }
+.matrix-ex5-cal   .x-monthpicker-years .x-monthpicker-item {
+    width: 68px; }
+
+.matrix-ex5-cal .x-monthpicker-item {
+  margin: 6px 0 7px;
+  font: 300 14px helvetica, arial, verdana, sans-serif;
+  text-align: center; }
+
+.matrix-ex5-cal .x-monthpicker-item-inner {
+  margin: 0 5px 0 5px;
+  color: black;
+  line-height: 32px;
+  cursor: pointer; }
+
+.matrix-ex5-cal a.x-monthpicker-item-inner:hover {
+  background-color: #52acff; }
+
+.matrix-ex5-cal .x-monthpicker-selected {
+  background-color: white;
+  border-style: solid;
+  border-color: #333333; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav {
+  height: 45px; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-button-ct {
+  width: 68px; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-button {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-top: 6px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-touch-callout: none;
+  background-color: white; }
+
+.matrix-ex5-cal a.x-monthpicker-yearnav-button:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-next {
+  background: url('data:image/png;base64,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') no-repeat center center; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-next-over {
+  background-position: center center; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-prev {
+  background: url('data:image/png;base64,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') no-repeat center center; }
+
+.matrix-ex5-cal .x-monthpicker-yearnav-prev-over {
+  background-position: center center; }
+
+.matrix-ex5-cal .x-monthpicker-small .x-monthpicker-item {
+  margin: 2px 0 3px; }
+.matrix-ex5-cal .x-monthpicker-small .x-monthpicker-item-inner {
+  margin: 0 5px 0 5px; }
+.matrix-ex5-cal .x-monthpicker-small .x-monthpicker-yearnav {
+  height: 37px; }
+.matrix-ex5-cal .x-monthpicker-small .x-monthpicker-yearnav-button {
+  margin-top: 2px; }
+
+/*<if slicer>*/
+.matrix-ex5-cal .x-cmd-slicer.x-datepicker-header:before {
+  display: none;
+  content: "x-slicer:stretch:bottom" !important; }
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+.matrix-ex5-cal .x-cmd-slicer.x-datepicker-footer:before {
+  display: none;
+  content: "x-slicer:stretch:bottom" !important; }
+
+/*</if slicer>*/
+/* */

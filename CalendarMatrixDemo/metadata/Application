@@ -1,0 +1,50 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "MyGlobalController"
+        ],
+        "name": "CalendarMatrix",
+        "requires": [
+            "Ext.ux.CalendarMatrix.DateMatrixPickerExtension",
+            "Ext.ux.CalendarMatrix.CalendarMatrix"
+        ],
+        "stores": [
+            "OptionsExpireStore",
+            "LanguageStore"
+        ],
+        "views": [
+            "MyViewport",
+            "MatrixEx1",
+            "MatrixEx3",
+            "MatrixEx4",
+            "MatrixEx2",
+            "MatrixEx5",
+            "MatrixEx6"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "paths": [
+                    "{'Ext.ux.CalendarMatrix': './app/ux/CalendarMatrix/'}"
+                ]
+            },
+            "name": "Loader6",
+            "designerId": "6923a63e-fe15-47e8-9eda-b8d3f8b77400"
+        }
+    ]
+}

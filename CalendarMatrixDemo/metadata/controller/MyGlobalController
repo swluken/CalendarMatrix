@@ -1,0 +1,70 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "myglobalcontroller",
+        "designer|userClassName": "MyGlobalController"
+    },
+    "designerId": "9cf45b85-422d-42a9-b31a-8d16c4c2c5f8",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "tabpanel#mytabpanel",
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onTabpanelTabChange",
+                "implHandler": [
+                    "if (oldCard.getItemId() === 'matrixEx4' && oldCard.myWindow){",
+                    "    oldCard.myWindow.setHidden(true);",
+                    "",
+                    "    // Sample alternate logic to destroy component and reset date inputs ..",
+                    "    //     Ext.destroy(oldCard.myWindow);",
+                    "    //     oldCard.myWindow = undefined;",
+                    "    //     oldCard.down('#endBtn').setText('mm/dd/yyyy');",
+                    "    //     oldCard.down('#startBtn').setText('mm/dd/yyyy');",
+                    "}",
+                    "if (oldCard.getItemId() === 'matrixEx5' && oldCard.myWindow){",
+                    "    oldCard.myWindow.setHidden(true);",
+                    "}",
+                    "if (oldCard.getItemId() === 'matrixEx6' && oldCard.myWindow){",
+                    "    oldCard.myWindow.setHidden(true);",
+                    "}",
+                    "if (oldCard.getItemId() === 'matrixEx3'){",
+                    "    // Reset language to English in event changed",
+                    "    var cntr = oldCard.getController();",
+                    "    cntr.languageCalendarOverrides(cntr, 'en', 'English');  // see mixin",
+                    "    var languageSelect = cntr.lookupReference('languageSelect');",
+                    "    languageSelect.setValue('en');",
+                    "    if (oldCard.myWindow){",
+                    "        Ext.destroy(oldCard.myWindow);",
+                    "        oldCard.myWindow = undefined;",
+                    "    }",
+                    "",
+                    "    // Reset date on select button",
+                    "    var day_html = cntr.lookupReference('day');",
+                    "    day_html.update('SELECT');",
+                    "    day_html.removeCls('button-day');",
+                    "    day_html.selDate = null;",
+                    "    day_html.selDt = null;",
+                    "    var other_html = cntr.lookupReference('dayname_month');",
+                    "    other_html.update('');",
+                    "",
+                    "}"
+                ],
+                "name": "tabchange",
+                "scope": "me"
+            },
+            "name": "onTabpanelTabChange",
+            "designerId": "f7a140c1-be21-492b-a893-061349e9e5fd"
+        }
+    ]
+}

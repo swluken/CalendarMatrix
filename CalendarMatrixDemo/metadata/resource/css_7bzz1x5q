@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_7bzz1x5q",
+        "url": "./resources/css/ExpediaOverride.css"
+    },
+    "name": "css4",
+    "designerId": "0557f815-89f4-4507-a793-0cc3b3db7a91"
+}

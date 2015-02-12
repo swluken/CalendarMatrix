@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_h0qxbg9m",
+        "url": "./resources/css/CrispTouchOverrides.css"
+    },
+    "name": "css2",
+    "designerId": "e8027d08-6717-4fa0-9923-9dcd92529fb1"
+}

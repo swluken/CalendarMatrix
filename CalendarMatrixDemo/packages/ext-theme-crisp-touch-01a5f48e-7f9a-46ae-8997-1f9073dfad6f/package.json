@@ -1,0 +1,22 @@
+{
+    "name": "ext-theme-crisp-touch-01a5f48e-7f9a-46ae-8997-1f9073dfad6f",
+    "type": "theme",
+    "creator": "Architect",
+    "summary": "Architect created theme. Edit through Architect. Manual edits here will likly be discarded.",
+    "detailedDescription": "Architect created theme. Edit through Architect. Manual edits here will likly be discarded.",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "slicer": {
+        "js": [
+            {
+                "path": "${package.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ]
+    },
+    "output": "${package.dir}/build",
+    "local": true,
+    "requires": [],
+    "extend": "ext-theme-crisp-touch"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "./resources/css/CalendarMatrix.css"
+    },
+    "name": "css",
+    "designerId": "e69e40af-0907-4787-939c-3881aaeec86c"
+}

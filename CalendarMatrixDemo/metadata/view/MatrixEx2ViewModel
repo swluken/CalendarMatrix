@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "matrixex2",
+        "designer|userClassName": "MatrixEx2ViewModel"
+    },
+    "name": "MatrixEx1ViewModel1",
+    "designerId": "58a40631-d680-4b6e-8dd9-dd283c80ebfd"
+}

@@ -1,0 +1,384 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "matrix-ex3-cal"
+        ],
+        "designer|userAlias": "matrixex3",
+        "designer|userClassName": "MatrixEx3",
+        "height": null,
+        "itemId": "matrixEx3",
+        "layout": "border",
+        "margin": 5,
+        "maxHeight": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "scrollable": true,
+        "style": "background-color: white;",
+        "width": null
+    },
+    "name": "MatrixEx3",
+    "configAlternates": {
+        "scrollable": "boolean",
+        "style": "string"
+    },
+    "designerId": "9edbe16f-d681-424b-9df7-791533010ca9",
+    "viewControllerInstanceId": "0e94a408-98d0-4f7e-acf7-ea26e816fa08",
+    "viewModelInstanceId": "6977c5f8-beed-430e-a184-e6ca7b91960a",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "html": "3x1 Matrix sized for Neptune-Touch and Crisp-Touch Themes. Also demonstrates the following:<br> - Demonstrates International Language support<br> - Single Date selection popup with day counts from today (financial applications).  Utilizes overrideCellHtmlFn config to inject custom HTML into each cell<br> - Utilizes renderTplOverride config to display day of week names with 3 characters.<br> - Dates prior to today disabled utilizing disableFn config<br> - Weekend days custom styled utilizing customClsFn config<br>",
+                "layout|region": "north",
+                "style": "margin: 20px 0; font-size: 18px;"
+            },
+            "name": "MyContainer",
+            "configAlternates": {
+                "html": "string",
+                "style": "string",
+                "scrollable": "boolean"
+            },
+            "designerId": "22d442b5-659d-4ef9-9255-d7befddcac5d"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "language",
+                "fieldLabel": "Select Language",
+                "height": null,
+                "itemId": "languageSelect",
+                "labelWidth": 110,
+                "layout|region": "north",
+                "maxWidth": 300,
+                "reference": "languageSelect",
+                "store": "LanguageStore",
+                "value": [
+                    "en"
+                ],
+                "valueField": "code"
+            },
+            "name": "MyComboBox",
+            "designerId": "53bc0264-4572-4945-b067-c31080e63b25",
+            "cn": [
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLanguageSelectChange",
+                        "implHandler": [
+                            "var me = this;",
+                            "this.languageCalendarOverrides(this, newValue, field.findRecordByValue(newValue).get('language')); // see mixin",
+                            "var myWindow = me.getView().myWindow;",
+                            "if (myWindow){",
+                            "    var matrix = myWindow.down('#matrixEx3Cal');",
+                            "    matrix.setStartDay(field.startDay);",
+                            "    matrix.dispCalGrid();",
+                            "    matrix.down('#calGridTodayBtn').setText(field.todayText);",
+                            "    if (matrix.monthPicker){",
+                            "        Ext.destroy(matrix.monthPicker);",
+                            "        matrix.monthPicker = undefined;",
+                            "    }",
+                            "",
+                            "    var day_html = me.lookupReference('day');",
+                            "    if (day_html.selDate){",
+                            "        day_html.update(Ext.Date.format(day_html.selDate, 'j')+' <span class=\"button-year\">' + Ext.Date.format(day_html.selDate, 'Y')+'</span>');",
+                            "        var other_html = me.lookupReference('dayname_month');",
+                            "        other_html.update(Ext.Date.format(day_html.selDate, 'D')+'<br>'+Ext.Date.format(day_html.selDate, 'M'));",
+                            "    }",
+                            "",
+                            "}"
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onLanguageSelectChange",
+                    "designerId": "88091062-46ca-444f-b9d5-941b6acc7447"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "height": null,
+                "layout": "vbox",
+                "layout|region": "north",
+                "maxWidth": 150,
+                "minHeight": 60,
+                "style": "margin-bottom: 10px;"
+            },
+            "name": "MyContainer5",
+            "configAlternates": {
+                "style": "string"
+            },
+            "designerId": "942c9480-5760-43f5-99f8-ce0e7448e89a",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 20,
+                        "html": "MATURITY DATE",
+                        "layout|flex": null,
+                        "style": "padding-top: .2em; font-size: 1em; color: #3892D3; font-weight: bold;"
+                    },
+                    "name": "MyContainer6",
+                    "configAlternates": {
+                        "style": "string",
+                        "html": "string"
+                    },
+                    "designerId": "5316c228-84c0-4528-980a-a45deb5764d0"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "button"
+                        ],
+                        "container|align": "stretch",
+                        "height": null,
+                        "itemId": "selectBtn",
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "listeners": [
+                            "{render: function(panel) {",
+                            "   panel.el.on('click', function(e) {",
+                            "     var view=this.component.up('#matrixEx3');",
+                            "     var cntr = view.getController();",
+                            "     cntr.openCalendar(this.component);",
+                            "   });",
+                            " }",
+                            "}"
+                        ],
+                        "reference": "selectBtn",
+                        "width": null
+                    },
+                    "name": "MyContainer7",
+                    "configAlternates": {
+                        "listeners": "object"
+                    },
+                    "designerId": "d8b39a46-7775-4490-8b47-9d46aa6b325f",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "listeners",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "button-dayname-month"
+                                ],
+                                "html": null,
+                                "itemId": "dayname_month",
+                                "layout": "fit",
+                                "layout|flex": null,
+                                "reference": "dayname_month",
+                                "style": null,
+                                "width": 40
+                            },
+                            "name": "MyContainer8",
+                            "configAlternates": {
+                                "html": "string",
+                                "style": "string"
+                            },
+                            "designerId": "b4b90ea0-9a3e-4533-9ef5-6fbd4bfd93a8"
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "button-select"
+                                ],
+                                "html": "SELECT",
+                                "itemId": "day",
+                                "layout": "fit",
+                                "layout|flex": 1,
+                                "reference": "day",
+                                "style": null
+                            },
+                            "name": "MyContainer9",
+                            "configAlternates": {
+                                "html": "string",
+                                "style": "string"
+                            },
+                            "designerId": "9b3d8d3a-2843-4c1a-8639-9100ed84db6c"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center"
+            },
+            "name": "MyContainer10",
+            "designerId": "6901aaf4-8ce8-4514-b587-ddcdda39cc64"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initComponent",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "me.callParent(arguments);",
+                    "",
+                    "return;",
+                    "",
+                    "var renderTplOverride = [  // Overriding default renderTpl (refer to Ext.picker.Date) to include 3-chars in weekday names... see firstInitial() template method",
+                    "    '<div id=\"{id}-innerEl\" data-ref=\"innerEl\">',",
+                    "    '<div class=\"{baseCls}-header\">',",
+                    "    '<div id=\"{id}-prevEl\" data-ref=\"prevEl\" class=\"{baseCls}-prev {baseCls}-arrow\" role=\"button\" title=\"{prevText}\"></div>',",
+                    "    '<div id=\"{id}-middleBtnEl\" data-ref=\"middleBtnEl\" class=\"{baseCls}-month\" role=\"heading\">{%this.renderMonthBtn(values, out)%}</div>',",
+                    "    '<div id=\"{id}-nextEl\" data-ref=\"nextEl\" class=\"{baseCls}-next {baseCls}-arrow\" role=\"button\" title=\"{nextText}\"></div>',",
+                    "    '</div>',",
+                    "    '<table role=\"grid\" id=\"{id}-eventEl\" data-ref=\"eventEl\" class=\"{baseCls}-inner\" {%',",
+                    "    // If the DatePicker is focusable, make its eventEl tabbable.",
+                    "    // Note that we're looking at the `focusable` property because",
+                    "    // calling `isFocusable()` will always return false at that point",
+                    "    // as the picker is not yet rendered.",
+                    "    'if (values.$comp.focusable) {out.push(\"tabindex=\\\\\\\"0\\\\\\\"\");}',",
+                    "    '%} cellspacing=\"0\">',",
+                    "    '<thead><tr role=\"row\">',",
+                    "    '<tpl for=\"dayNames\">',",
+                    "    '<th role=\"columnheader\" class=\"{parent.baseCls}-column-header\" aria-label=\"{.}\">',",
+                    "    '<div role=\"presentation\" class=\"{parent.baseCls}-column-header-inner\">{.:this.firstInitial}</div>',",
+                    "    '</th>',",
+                    "    '</tpl>',",
+                    "    '</tr></thead>',",
+                    "    '<tbody><tr role=\"row\">',",
+                    "    '<tpl for=\"days\">',",
+                    "    '{#:this.isEndOfWeek}',",
+                    "    '<td role=\"gridcell\">',",
+                    "    '<div hidefocus=\"on\" class=\"{parent.baseCls}-date\"></div>',",
+                    "    '</td>',",
+                    "    '</tpl>',",
+                    "    '</tr></tbody>',",
+                    "    '</table>',",
+                    "    '<tpl if=\"showToday\">',",
+                    "    '<div id=\"{id}-footerEl\" data-ref=\"footerEl\" role=\"presentation\" class=\"{baseCls}-footer\">{%this.renderTodayBtn(values, out)%}</div>',",
+                    "    '</tpl>',",
+                    "    '</div>',",
+                    "    {",
+                    "        firstInitial: function(value) {",
+                    "            return value.substr(0, 3).toUpperCase();  // Overridden for this example",
+                    "        },",
+                    "        isEndOfWeek: function(value) {",
+                    "            // convert from 1 based index to 0 based",
+                    "            // by decrementing value once.",
+                    "            value--;",
+                    "            var end = value % 7 === 0 && value !== 0;",
+                    "            return end ? '</tr><tr role=\"row\">' : '';",
+                    "        },",
+                    "        renderTodayBtn: function(values, out) {",
+                    "            Ext.DomHelper.generateMarkup(values.$comp.todayBtn.getRenderTree(), out);",
+                    "        },",
+                    "        renderMonthBtn: function(values, out) {",
+                    "            Ext.DomHelper.generateMarkup(values.$comp.monthBtn.getRenderTree(), out);",
+                    "        }",
+                    "    }",
+                    "];",
+                    "",
+                    "",
+                    "var cal = Ext.create('Ext.ux.CalendarMatrix.CalendarMatrix', {",
+                    "    numRows: 1,",
+                    "    numCols: 2,",
+                    "    matrixDisabled: false,",
+                    "    matrixMode: 'SINGLE',",
+                    "    cls: 'matrix-cal',",
+                    "    itemId: 'matrixEx3Cal',",
+                    "    includeMonthPicker: true,",
+                    "    renderTplOverride: renderTplOverride,",
+                    "    overrideCellHtmlFn: function(cls, dayNum, cellDate){",
+                    "        // Add # days from today to each cell (Financial Day Count calendar)",
+                    "        var myHtml=dayNum;",
+                    "        if (cls === this.activeCls){",
+                    "            var today= Ext.Date.clearTime(new Date(Date(Ext.Date.now())), true);",
+                    "            var diff = Ext.Date.diff(today, cellDate, Ext.Date.DAY);",
+                    "            var diffStr = (diff>0 ? diff.toString() : '&nbsp;');",
+                    "            myHtml = myHtml+'<div class=\"daycount-inner\">'+diffStr+'</div>';",
+                    "        }",
+                    "        return myHtml;",
+                    "    },",
+                    "    disableFn: function(cellDate){  // Disable all days prior to today from selection",
+                    "        var today= Ext.Date.clearTime(new Date(Date(Ext.Date.now())), true);",
+                    "        return (cellDate < today);",
+                    "    },",
+                    "    customClsFn: function(cellDate){ // Speical styling for weekend days",
+                    "       var customCls = '';",
+                    "       if ([0,6].indexOf(parseInt(Ext.Date.format(cellDate, 'w'))) !== -1) {",
+                    "           customCls = 'weekend';",
+                    "       }",
+                    "       return customCls;",
+                    "    }",
+                    "});",
+                    "",
+                    "me.add(cal);",
+                    ""
+                ]
+            },
+            "name": "initComponent",
+            "designerId": "4f3658af-1b00-400a-83f3-799e38debc40"
+        }
+    ]
+}

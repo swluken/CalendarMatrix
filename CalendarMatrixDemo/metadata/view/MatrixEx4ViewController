@@ -1,0 +1,146 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "matrixex4",
+        "designer|userClassName": "MatrixEx4ViewController"
+    },
+    "name": "MatrixEx2ViewController2",
+    "designerId": "d4c83cf3-be8e-4ccf-ac4f-a5b92f854731",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "x,y, rangeSelectMode"
+                ],
+                "fn": "createWindow",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "myWindow = Ext.create('Ext.window.Window', {",
+                    "    width: 432,",
+                    "    height: 210,",
+                    "    cls: 'matrix-ex4-cal',",
+                    "    style: 'padding: 4px;',",
+                    "    itemId: 'calendarPopupWindow',",
+                    "    header: false",
+                    "});",
+                    "",
+                    "",
+                    "me.getView().myWindow = myWindow;",
+                    "",
+                    "var cal = Ext.create('Ext.ux.CalendarMatrix.CalendarMatrix', {",
+                    "    numRows: 1,",
+                    "    numCols: 2,",
+                    "    matrixMode: 'RANGE',",
+                    "    matrixDisabled: false,",
+                    "    rangeSelectMode: rangeSelectMode,",
+                    "    cls: 'matrix-cal',",
+                    "    itemId: 'matrixEx4Cal',",
+                    "    reference: 'matrixEx4Cal'",
+                    "});",
+                    "",
+                    "cal.mon(cal, 'calendarselect', me.handleSelect, me);",
+                    "",
+                    "",
+                    "// Proceed to remove default month navigation toolbar and add custom arrows",
+                    "var toolbar = cal.down('#calGridToolBar');",
+                    "cal.remove(toolbar, true);",
+                    "",
+                    "var priorBtn = Ext.create('Ext.button.Button',{",
+                    "    ui: 'plain',",
+                    "    iconCls: 'cal-grid-prior-btn',",
+                    "    text: '',",
+                    "    style: 'z-index: 200; position: absolute;',",
+                    "    x: -30,",
+                    "    y: 3,",
+                    "    itemId: 'priorCalGridMatrix',",
+                    "    reference: 'priorCalGridMatrix',",
+                    "    listeners: {",
+                    "        click: 'onPriorCalGridMatrixClick'",
+                    "    }",
+                    "});",
+                    "",
+                    "cal.add(priorBtn);",
+                    "",
+                    "var nextBtn = Ext.create('Ext.button.Button',{",
+                    "    ui: 'plain',",
+                    "    iconCls: 'cal-grid-next-btn',",
+                    "    text: '',",
+                    "    style: 'z-index: 200; position: absolute; ',",
+                    "    x: 385,",
+                    "    y: 3,",
+                    "    itemId: 'nextCalGridMatrix',",
+                    "    reference: 'nextCalGridMatrix',",
+                    "    cls: 'cal-grid-next-btn',",
+                    "    listeners: {",
+                    "        click: 'onNextCalGridMatrixClick'",
+                    "    }",
+                    "});",
+                    "",
+                    "cal.add(nextBtn);",
+                    "",
+                    "myWindow.add(cal);",
+                    "",
+                    "myWindow.showAt(x, y, {duration: 100});",
+                    "",
+                    ""
+                ]
+            },
+            "name": "createWindow",
+            "designerId": "2dd0d787-d620-4785-9a5f-bd4686880fae"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "calendarMatrix",
+                    "selDt",
+                    "selDate",
+                    "selVal"
+                ],
+                "fn": "handleSelect",
+                "implHandler": [
+                    "var me=this,",
+                    "    rangeDt1 = calendarMatrix.rangeDt1,",
+                    "    rangeDate1_fmt = Ext.Date.format(calendarMatrix.rangeDate1, 'm/d/Y'),",
+                    "    rangeDt2 = calendarMatrix.rangeDt2,",
+                    "    rangeDate2_fmt = Ext.Date.format(calendarMatrix.rangeDate2, 'm/d/Y'),",
+                    "    rangeSelectMode = calendarMatrix.getRangeSelectMode();",
+                    "",
+                    "if (rangeSelectMode==='startdate'){",
+                    "    me.lookupReference('startBtn').setText(rangeDate1_fmt);",
+                    "    if (Ext.isEmpty(rangeDt2)){",
+                    "        // auto-select end date button and redisplay calendar to accept end date",
+                    "        me.onEndBtnClick(me.lookupReference('endBtn'));",
+                    "    }",
+                    "}",
+                    "else if (rangeSelectMode==='enddate'){",
+                    "    me.lookupReference('endBtn').setText(rangeDate2_fmt);",
+                    "    if (Ext.isEmpty(rangeDt1)){",
+                    "        // auto-select start date button and redisplay calendar to accept start date",
+                    "        me.onStartBtnClick(me.lookupReference('startBtn'));",
+                    "    }",
+                    "}"
+                ]
+            },
+            "name": "handleSelect",
+            "designerId": "706f662f-5cd5-468e-a60e-ec61b01bbd31"
+        }
+    ]
+}

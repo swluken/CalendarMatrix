@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "matrixex1",
+        "designer|userClassName": "MatrixEx1ViewController"
+    },
+    "designerId": "e4782be6-0ade-47c9-bb57-e14ef0898f7c"
+}

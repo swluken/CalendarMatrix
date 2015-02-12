@@ -1,0 +1,176 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "matrix-ex1-cal"
+        ],
+        "designer|userAlias": "matrixex1",
+        "designer|userClassName": "MatrixEx1",
+        "height": null,
+        "itemId": "matrixEx1",
+        "layout": "border",
+        "margin": null,
+        "maxHeight": null,
+        "maxWidth": null,
+        "scrollable": true,
+        "style": "background-color: white; margin-left: 5px;",
+        "width": null
+    },
+    "name": "MyContainer",
+    "configAlternates": {
+        "style": "string",
+        "scrollable": "boolean"
+    },
+    "designerId": "28d4bae7-cf04-4c44-80df-cddad17ced17",
+    "viewControllerInstanceId": "e4782be6-0ade-47c9-bb57-e14ef0898f7c",
+    "viewModelInstanceId": "ec5be8e8-6511-4cb1-9e00-834a3c732c16",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "html": "MarketWatch style Options Expiration read-only Calendar.  3x4 Matrix with width of 678px sized for Neptume and Crisp Themes.  Initialize 6 months back. Month Picker displayed upon clicking down arrow next to Today button (can be disabled).  Sample code demonstrates how to implement flexible data-driven legend.",
+                "layout|region": "north",
+                "style": "margin: 20px 0; font-size: 18px;"
+            },
+            "name": "MyContainer",
+            "configAlternates": {
+                "html": "string",
+                "style": "string",
+                "scrollable": "boolean"
+            },
+            "designerId": "59951a89-25ca-4a41-9eda-d4cdd19607a7"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "westCont",
+                "layout|region": "west",
+                "maxWidth": 678,
+                "minHeight": 955,
+                "width": 678
+            },
+            "name": "MyContainer2",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "973c2c46-19c3-405f-97da-0741e16e10a9",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "calendar-matrix-legend"
+                        ],
+                        "height": 50,
+                        "itemId": "calendarMatrixLegend"
+                    },
+                    "name": "MyContainer3",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "1bccefaa-22f5-4f89-b658-7c4756ed79c5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center"
+            },
+            "name": "MyContainer1",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "b783e14f-ed8f-43d6-a621-45c45ce69723"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initComponent",
+                "implHandler": [
+                    "var me = this, westCont, store, records, priorMatrixDts, numCols=3, i, legendData, legendHtml='', calendarMatrixLegend;",
+                    "",
+                    "me.callParent(arguments);",
+                    "",
+                    "westCont = me.down('#westCont');",
+                    "",
+                    "store = Ext.create('CalendarMatrix.store.OptionsExpireStore', {});",
+                    "records = store.getRange();",
+                    "priorMatrixDts = [];",
+                    "for (i=0; i<records.length; i++){",
+                    "    priorMatrixDts.push(records[i].data);",
+                    "}",
+                    "",
+                    "var cal = Ext.create('Ext.ux.CalendarMatrix.CalendarMatrix', {",
+                    "    startMonthIdx: -6,",
+                    "    numRows: 4,",
+                    "    numCols: numCols,",
+                    "    priorMatrixDts: priorMatrixDts,",
+                    "    cls: 'matrix-cal',",
+                    "    itemId: 'matrixEx1Cal'",
+                    "});",
+                    "",
+                    "westCont.add(cal);",
+                    "",
+                    "",
+                    "legendData = [",
+                    "    {cls: 'holiday', legend: 'Holiday'},",
+                    "    {cls: 'stopTrading', legend: 'Stop Trading'},",
+                    "    {cls: 'optionsExpire', legend: 'Options Expire'},",
+                    "    {cls: 'quarterlyExpiration', legend: 'Quarterly Expiration'}",
+                    "];",
+                    "",
+                    "i=0;",
+                    "while (i<legendData.length)",
+                    "{",
+                    "    legendHtml = legendHtml + '<div class=\"legend-span\">';",
+                    "    for (j=0; j<numCols; j++){",
+                    "        legendHtml = legendHtml +",
+                    "            '<div class=\"legend-cls '+ (Ext.isEmpty(legendData[i].cls) ? '' : legendData[i].cls) + '\"></div>' +",
+                    "            '<div class = \"legend-legend\">' + legendData[i].legend + '</div>';",
+                    "        i++;",
+                    "        if (i>=legendData.length){break;}",
+                    "    }",
+                    "    legendHtml = legendHtml + '</div>';",
+                    "}",
+                    "",
+                    "calendarMatrixLegend = me.down('#calendarMatrixLegend');",
+                    "calendarMatrixLegend.update(legendHtml);"
+                ]
+            },
+            "name": "initComponent",
+            "designerId": "21427a25-9c4b-4a35-b00c-165e5266eadd"
+        }
+    ]
+}

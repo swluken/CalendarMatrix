@@ -1,0 +1,376 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "matrix-ex6-cal"
+        ],
+        "designer|userAlias": "matrixex6",
+        "designer|userClassName": "MatrixEx6",
+        "height": null,
+        "itemId": "matrixEx6",
+        "layout": "border",
+        "margin": 5,
+        "maxHeight": null,
+        "maxWidth": null,
+        "style": "background-color: white;",
+        "width": null
+    },
+    "name": "MatrixEx",
+    "configAlternates": {
+        "scrollable": "boolean",
+        "style": "string"
+    },
+    "designerId": "1cfd805c-c9e5-4b67-bfa9-468abf72dbd3",
+    "viewControllerInstanceId": "bfe8dad1-86d1-4500-bd33-83db1cb4e5b9",
+    "viewModelInstanceId": "29ec4abc-7c03-494c-9cb3-dda04446358a",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "html": "Expedia and Travelocity style date range selector. Also demonstrates the following:<br> - Customized month navigation arrows with logic to show hide based on selected dates<br> - Demonstrates how to process 'mouseover' event to dynamically paint range as user hovers<br> - Utilizes disableFn config to dynamically disable prior and future dates based on startDate vs. endDate selection mode.",
+                "layout|region": "north",
+                "style": "margin: 20px 0; font-size: 18px;"
+            },
+            "name": "MyContainer",
+            "configAlternates": {
+                "html": "string",
+                "style": "string",
+                "scrollable": "boolean"
+            },
+            "designerId": "5f72fdfd-afab-437f-ba16-d4fca196b396"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 60,
+                "layout|region": "north"
+            },
+            "name": "MyToolbar",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "861773b5-fc74-4666-a224-c65aaff74f67",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowDepress": null,
+                        "cls": "inputBtn",
+                        "designer|uiInterfaceName": "plain",
+                        "enableToggle": null,
+                        "focusCls": null,
+                        "height": 45,
+                        "iconCls": "fa-icon-calendar",
+                        "itemId": "startBtn",
+                        "layout|flex": null,
+                        "reference": "startBtn",
+                        "style": null,
+                        "text": "mm/dd/yyyy",
+                        "ui": "plain",
+                        "width": 150
+                    },
+                    "name": "MyButton",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "78f99503-101a-41e7-9c46-8b98cd3147e9",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onStartBtnClick",
+                                "implHandler": [
+                                    "var me = this, el,  y, myWindow, calendarMatrix, lastMatrixItem, rangeSelectMode;",
+                                    "",
+                                    "button.addCls('date-input-selected');",
+                                    "this.lookupReference('endBtn').removeCls('date-input-selected');",
+                                    "",
+                                    "el = button.getEl();",
+                                    "y = el.getY()+el.getHeight()+10;",
+                                    "",
+                                    "myWindow = me.getView().myWindow;",
+                                    "if (!myWindow){",
+                                    "    me.createWindow(15, y, 'startdate');",
+                                    "}",
+                                    "else {",
+                                    "    calendarMatrix = myWindow.down('#matrixEx6Cal');",
+                                    "    calendarMatrix.setRangeSelectMode('startdate');",
+                                    "    calendarMatrix.dispCalGrid();",
+                                    "    myWindow.showAt(15, y, {duration: 10});",
+                                    "",
+                                    "    // Hide prior/next buttons if user shouldn't be navigating",
+                                    "    lastMatrixItem = calendarMatrix.down('#'+calendarMatrix.matrix[calendarMatrix.matrix.length-1].itemId+'_mc');",
+                                    "    rangeSelectMode = calendarMatrix.getRangeSelectMode();",
+                                    "    myWindow.down('#priorCalGridMatrix').setVisible(calendarMatrix.getStartMonthIdx()>0);",
+                                    "    myWindow.down('#nextCalGridMatrix').setVisible(true);",
+                                    "    if (rangeSelectMode==='startdate' && !Ext.isEmpty(calendarMatrix.rangeDt2) &&",
+                                    "        calendarMatrix.rangeDate2 < lastMatrixItem.maxDate){",
+                                    "        myWindow.down('#nextCalGridMatrix').setVisible(false);",
+                                    "    }",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onStartBtnClick",
+                            "designerId": "73dc06db-4226-40ea-9452-3fb60c3de29f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowDepress": null,
+                        "cls": "inputBtn",
+                        "designer|uiInterfaceName": "plain",
+                        "enableToggle": null,
+                        "focusCls": null,
+                        "height": 45,
+                        "iconCls": "fa-icon-calendar",
+                        "itemId": "endBtn",
+                        "layout|flex": null,
+                        "reference": "endBtn",
+                        "style": null,
+                        "text": "mm/dd/yyyy",
+                        "ui": "plain",
+                        "width": 150
+                    },
+                    "name": "MyButton1",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "c35822c9-c6fd-4f11-b87c-785b3a48dfe6",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEndBtnClick",
+                                "implHandler": [
+                                    "var me = this, el,  y, myWindow, calendarMatrix, firstMatrixItem;",
+                                    "",
+                                    "button.addCls('date-input-selected');",
+                                    "this.lookupReference('startBtn').removeCls('date-input-selected');",
+                                    "",
+                                    "el = button.getEl();",
+                                    "y = el.getY()+el.getHeight()+10;",
+                                    "",
+                                    "myWindow = me.getView().myWindow;",
+                                    "if (!myWindow){",
+                                    "    me.createWindow(170, y, 'enddate');",
+                                    "}",
+                                    "else {",
+                                    "    calendarMatrix = myWindow.down('#matrixEx6Cal');",
+                                    "    calendarMatrix.setRangeSelectMode('enddate');",
+                                    "    calendarMatrix.dispCalGrid();",
+                                    "    myWindow.showAt(170, y, {duration: 10});",
+                                    "",
+                                    "    // Hide prior/next buttons if user shouldn't be navigating",
+                                    "    firstMatrixItem = calendarMatrix.down('#'+calendarMatrix.matrix[0].itemId+'_mc');",
+                                    "    rangeSelectMode = calendarMatrix.getRangeSelectMode();",
+                                    "    myWindow.down('#priorCalGridMatrix').setVisible(true);",
+                                    "    myWindow.down('#nextCalGridMatrix').setVisible(true);",
+                                    "    if (rangeSelectMode==='enddate' && !Ext.isEmpty(calendarMatrix.rangeDt1) &&",
+                                    "        calendarMatrix.rangeDate1 >= firstMatrixItem.minDate){",
+                                    "        myWindow.down('#priorCalGridMatrix').setVisible(false);",
+                                    "    }",
+                                    "}",
+                                    "",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onEndBtnClick",
+                            "designerId": "844a06f3-e177-41f7-af94-cc5a3f157984"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": null,
+                        "designer|uiInterfaceName": "plain",
+                        "height": 30,
+                        "iconCls": "fa-icon-remove",
+                        "itemId": "resetBtn",
+                        "layout|flex": null,
+                        "style": null,
+                        "text": null,
+                        "ui": "plain",
+                        "width": 30
+                    },
+                    "name": "MyButton3",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "c9cb2678-3877-4668-b858-cd7610fb39c8",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onResetBtnClick",
+                                "implHandler": [
+                                    "var me = this,",
+                                    "    view = me.getView(),",
+                                    "    myWindow = view.myWindow;",
+                                    "",
+                                    "if (myWindow) {",
+                                    "    Ext.destroy(myWindow);",
+                                    "    view.myWindow = undefined;",
+                                    "}",
+                                    "view.down('#endBtn').setText('mm/dd/yyyy');",
+                                    "view.down('#startBtn').setText('mm/dd/yyyy');",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onResetBtnClick",
+                            "designerId": "dfa53e99-b7cd-486a-bc0a-0700f406881e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowDepress": null,
+                        "cls": "find-btn",
+                        "designer|uiInterfaceName": "plain",
+                        "enableToggle": null,
+                        "focusCls": null,
+                        "height": 45,
+                        "iconAlign": null,
+                        "iconCls": null,
+                        "itemId": "findBtn",
+                        "layout|flex": null,
+                        "reference": "findBtn",
+                        "style": null,
+                        "text": "Search",
+                        "ui": "plain",
+                        "width": 85
+                    },
+                    "name": "MyButton2",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "56be3eb2-6c3a-4779-92f4-0b246e7f1d88",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onFindBtnClick",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "",
+                                    "var myWindow = me.getView().myWindow;",
+                                    "if (myWindow) {",
+                                    "    var matrix = myWindow.down('#matrixEx6Cal');",
+                                    "    console.log('matrixEx6Cal: startDt='+matrix.rangeDt1+', endDt='+matrix.rangeDt2);",
+                                    "",
+                                    "    myWindow.setVisible(false);",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onFindBtnClick",
+                            "designerId": "558a0918-c490-4e83-a9ae-4fcd6d6aab33"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center"
+            },
+            "name": "MyContainer15",
+            "designerId": "a43f17a9-2b97-4e97-a011-a2b58377121f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initComponent",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "me.callParent(arguments);",
+                    ""
+                ]
+            },
+            "name": "initComponent",
+            "designerId": "e07571c5-8117-4ee0-81bd-dbb82afa63ba"
+        }
+    ]
+}
