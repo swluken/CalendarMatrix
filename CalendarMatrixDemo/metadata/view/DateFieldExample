@@ -1,0 +1,973 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "date-field-example"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "datefieldexample",
+        "designer|userClassName": "DateFieldExample",
+        "height": null,
+        "itemId": null,
+        "layout": "vbox",
+        "me": null,
+        "reference": null,
+        "style": "background-color: white; margin: 0px 5px;",
+        "width": null
+    },
+    "name": "MyContainer2",
+    "configAlternates": {
+        "me": "object",
+        "style": "string"
+    },
+    "designerId": "27047571-c46a-4881-bbd4-eee6e1b4c05a",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "me",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "980ba3e7-b831-4297-80a4-a3ea2056d158",
+    "viewModelInstanceId": "b60dab86-9214-4876-b558-9a183236b4c0",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "Combination example of Single Date selection plus Range selection within Forms and Grids (row editing and cell editing).  It demonstrates custom implementation of CalendarMatrix utilizing Ext.form.field.Date which allows manual date input with validation, but where CalendarMatrix replaces the standard datepicker. DateFieldMixin.js is provided which demonstrates how a Mixin class can be used to simplify repetitive implementations of common functionality.  <br>- If both dates empty and user clicks on FromDate, then implement SINGLE selection mode (i.e. FromDate only style input) <br>- If both dates empty and user clicks on ToDate, then implement RANGE selection mode and after ToDate selected,   ToDate is anchored and user allowed to continue selection of FromDate <br>- If both dates populated then accept either ToDate or FromDate based on datefield selection",
+                "layout|flex": null,
+                "style": "margin: 20px 0; font-size: 18px;"
+            },
+            "name": "MyContainer16",
+            "configAlternates": {
+                "style": "string",
+                "html": "string"
+            },
+            "designerId": "b40f966e-4235-4c0a-a413-eb144b0e6c82"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "controller": null,
+                "height": null,
+                "layout": null,
+                "title": null,
+                "width": null
+            },
+            "name": "MyForm",
+            "designerId": "d55b3329-a363-4cb9-a4eb-6bb7bf838b91",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": null,
+                        "minHeight": 100,
+                        "title": ""
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "c05d66a1-f2ce-426f-a8ff-b38ef19f6e70",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "defaults": [
+                                    "{labelStyle: 'text-align: right; font-weight: bold; padding-top: 5px;',",
+                                    " height: 35,",
+                                    " style: 'padding-top: 5px'}"
+                                ],
+                                "height": "40px",
+                                "layout": "hbox",
+                                "maxHeight": null,
+                                "style": null
+                            },
+                            "name": "MyContainer",
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "235cd6db-c4b5-42d9-ba00-d412c8862fc9",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt1',",
+                                            "windowFromTitle: 'Select Trade Date:',",
+                                            "disableFn: function(cellDate, matrixCont){  // Disable after today",
+                                            "   var today= Ext.Date.clearTime(new Date(Date(Ext.Date.now())), true);",
+                                            "   return (cellDate > today);",
+                                            "},",
+                                            "startMonthIdx: -2,",
+                                            "numRows: 1,",
+                                            "numCols: 3",
+                                            "}"
+                                        ],
+                                        "dateFieldMixinParams": null,
+                                        "fieldLabel": "TRADE DATE",
+                                        "itemId": "fromDt1",
+                                        "labelStyle": null,
+                                        "labelWidth": 160,
+                                        "listeners": [
+                                            "{trigcalmatrix: 'onFromDtMixin'}"
+                                        ],
+                                        "mixinParams": null,
+                                        "reference": "fromDt1",
+                                        "useCalendarMatrix": true,
+                                        "width": 280
+                                    },
+                                    "name": "MyDateField",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "mixinParams": "object",
+                                        "dateFieldMixinParams": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "c9773216-e780-439e-8c8d-f5e01fc42479",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "mixinParams",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinParams",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt1'",
+                                            "}"
+                                        ],
+                                        "designer|uiInterfaceName": "plain",
+                                        "height": 30,
+                                        "iconCls": "fa-icon-remove",
+                                        "itemId": null,
+                                        "layout|flex": null,
+                                        "listeners": [
+                                            "{click: 'onResetBtnMixinClick'}"
+                                        ],
+                                        "maxWidth": null,
+                                        "reference": null,
+                                        "text": null,
+                                        "ui": "plain",
+                                        "width": 50
+                                    },
+                                    "name": "MyButton",
+                                    "configAlternates": {
+                                        "listeners": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "b8941a74-bf17-452d-855c-31cc7638253e",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer1",
+                                    "designerId": "282564be-987a-49ee-9e5b-df5745e930ac"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "defaults": [
+                                    "{labelStyle: 'text-align: right; font-weight: bold; padding-top: 5px;',",
+                                    " height: 35,",
+                                    " style: 'padding-top: 5px'}"
+                                ],
+                                "height": "40px",
+                                "layout": "hbox",
+                                "maxHeight": null,
+                                "style": null
+                            },
+                            "name": "MyContainer2",
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "7e2af201-0b0e-4006-b532-8955de24e2eb",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt2',",
+                                            "toRef: 'toDt2'",
+                                            "}"
+                                        ],
+                                        "dateFieldMixinParams": null,
+                                        "fieldLabel": "REPORT DATES &nbsp;&nbsp;From",
+                                        "itemId": "fromDt2",
+                                        "labelStyle": null,
+                                        "labelWidth": 160,
+                                        "listeners": [
+                                            "{trigcalmatrix: 'onFromDtMixin'}"
+                                        ],
+                                        "mixinParams": null,
+                                        "reference": "fromDt2",
+                                        "useCalendarMatrix": true,
+                                        "width": 280
+                                    },
+                                    "name": "MyDateField",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "mixinParams": "object",
+                                        "dateFieldMixinParams": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "33521b70-0642-4543-9237-e0045479bf9a",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "mixinParams",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinParams",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt2',",
+                                            "toRef: 'toDt2'",
+                                            "}"
+                                        ],
+                                        "dateFieldMixinParams": null,
+                                        "fieldLabel": "To",
+                                        "itemId": "toDt2",
+                                        "labelStyle": null,
+                                        "labelWidth": 60,
+                                        "layout|flex": null,
+                                        "listeners": [
+                                            "{trigcalmatrix: 'onToDtMixin'}"
+                                        ],
+                                        "mixinParams": null,
+                                        "readOnly": null,
+                                        "reference": "toDt2",
+                                        "useCalendarMatrix": true,
+                                        "width": 180
+                                    },
+                                    "name": "MyDateField1",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "mixinParams": "object",
+                                        "dateFieldMixinParams": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "9f4c42c8-f27c-46b8-88a1-73c0b6b753f5",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "mixinParams",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinParams",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt2',",
+                                            "toRef: 'toDt2'",
+                                            "}"
+                                        ],
+                                        "designer|uiInterfaceName": "plain",
+                                        "height": 30,
+                                        "iconCls": "fa-icon-remove",
+                                        "itemId": null,
+                                        "layout|flex": null,
+                                        "listeners": [
+                                            "{click: 'onResetBtnMixinClick'}"
+                                        ],
+                                        "maxWidth": null,
+                                        "reference": null,
+                                        "text": null,
+                                        "ui": "plain",
+                                        "width": 50
+                                    },
+                                    "name": "MyButton",
+                                    "configAlternates": {
+                                        "listeners": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "d958b59f-2791-490b-854a-7a2f10c355ac",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer1",
+                                    "designerId": "a846f6f8-57fe-4b38-8805-8f642f705801"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "layout": "hbox",
+                "layout|flex": 1
+            },
+            "name": "MyContainer3",
+            "designerId": "6ef3707b-7257-4869-ab93-6d1de216f9a2",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "scrollable": null,
+                        "store": [
+                            "{myModels}"
+                        ],
+                        "title": "Range Edit (Row Editor)"
+                    },
+                    "name": "MyGridPanel",
+                    "configAlternates": {
+                        "store": "binding",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "182f6c41-f23e-4ba6-9bc9-75480bf8e180",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "trackOver": null
+                            },
+                            "name": "MyTable",
+                            "designerId": "59ed5902-0b7c-4da6-9c8f-6f7a41e99807"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "textfield",
+                                "text": "Textfield"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "260c619f-fd6f-4fea-8731-b3fcf28bbe56"
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fromdate",
+                                "format": "m/j/Y",
+                                "text": "Begin Date",
+                                "width": 120
+                            },
+                            "name": "MyDateColumn",
+                            "designerId": "0a7f4d82-192d-44d7-8dbd-c6762244f3a9",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt3',",
+                                            "toRef: 'toDt3',",
+                                            "windowFromTitle: 'Select Begin Date:'",
+                                            "}"
+                                        ],
+                                        "itemId": null,
+                                        "listeners": [
+                                            "{",
+                                            "trigcalmatrix: 'onFromDtMixin'",
+                                            "}"
+                                        ],
+                                        "reference": "fromDt3",
+                                        "useCalendarMatrix": true
+                                    },
+                                    "name": "MyDateField2",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "27a25501-452f-4828-a179-7dc57b86479d",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "todate",
+                                "format": "m/j/Y",
+                                "text": "End Date",
+                                "width": 120
+                            },
+                            "name": "MyDateColumn1",
+                            "designerId": "4674ee4b-368c-4db6-99cc-7ae467b2b1bb",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt3',",
+                                            "toRef: 'toDt3',",
+                                            "windowToTitle: 'Select End Date:'",
+                                            "}"
+                                        ],
+                                        "listeners": [
+                                            "{",
+                                            "trigcalmatrix: 'onToDtMixin'",
+                                            "}"
+                                        ],
+                                        "reference": "toDt3",
+                                        "useCalendarMatrix": true
+                                    },
+                                    "name": "MyDateField3",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "a0a34acb-45e9-414c-966c-f272174351e7",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "numberfield",
+                                "format": "00",
+                                "text": "Numberfield"
+                            },
+                            "name": "MyNumberColumn1",
+                            "designerId": "0854e569-f00a-4ace-8c05-2b3d0ef3fe6f"
+                        },
+                        {
+                            "type": "Ext.grid.plugin.RowEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clicksToEdit": 1
+                            },
+                            "name": "MyRowEditingPlugin",
+                            "designerId": "f2ac812c-3246-4a81-8b7b-fce202f41634"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "grid-cell-editor-example"
+                        ],
+                        "layout|flex": 1,
+                        "scrollable": null,
+                        "store": [
+                            "{myModels}"
+                        ],
+                        "title": "Range Edit (Cell Editor)"
+                    },
+                    "name": "MyGridPanel2",
+                    "configAlternates": {
+                        "store": "binding",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "53a24b26-e4cb-49c5-87c2-6737b2cd3fb3",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "trackOver": null
+                            },
+                            "name": "MyTable",
+                            "designerId": "6f9a9472-6b4a-4d2d-92bb-9ddafe212cf8"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "textfield",
+                                "text": "Textfield"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "efd226a9-6db9-4b93-a0ea-9ff3782dad22",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField",
+                                    "designerId": "75f398f2-b85f-450f-996a-e04d89b2c7d8"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "fromdate",
+                                "format": "m/j/Y",
+                                "itemId": "fromDt4",
+                                "reference": "fromDt4",
+                                "text": "Begin Date",
+                                "width": 120
+                            },
+                            "name": "MyDateColumn",
+                            "designerId": "c073aed8-5b5e-4c0b-a8b2-f81ca7510e70",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt4',",
+                                            "toRef: 'toDt4',",
+                                            "windowFromTitle: 'Select Begin Date:',",
+                                            "cellEditMode: true",
+                                            "}"
+                                        ],
+                                        "itemId": null,
+                                        "listeners": [
+                                            "{",
+                                            "trigcalmatrix: 'onFromDtMixin'",
+                                            "}"
+                                        ],
+                                        "reference": "fromDt4edit",
+                                        "useCalendarMatrix": true
+                                    },
+                                    "name": "MyDateField2",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "fae1c4ec-5182-4539-b9b6-9fb571f0314e",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "todate",
+                                "format": "m/j/Y",
+                                "itemId": "toDt4",
+                                "reference": "toDt4",
+                                "text": "End Date",
+                                "width": 120
+                            },
+                            "name": "MyDateColumn1",
+                            "designerId": "c3219a19-dae8-4ada-b9c4-fdae2d6bafb3",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFieldMixinConfig": [
+                                            "{",
+                                            "fromRef: 'fromDt4',",
+                                            "toRef: 'toDt4',",
+                                            "windowToTitle: 'Select End Date:',",
+                                            "cellEditMode: true",
+                                            "}"
+                                        ],
+                                        "itemId": null,
+                                        "listeners": [
+                                            "{",
+                                            "trigcalmatrix: 'onToDtMixin'",
+                                            "}"
+                                        ],
+                                        "reference": "toDt4edit",
+                                        "useCalendarMatrix": true
+                                    },
+                                    "name": "MyDateField3",
+                                    "configAlternates": {
+                                        "useCalendarMatrix": "boolean",
+                                        "listeners": "object",
+                                        "dateFieldMixinConfig": "object"
+                                    },
+                                    "designerId": "20ba260d-b656-4788-b36e-5159e4826b7a",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "useCalendarMatrix",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "listeners",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFieldMixinConfig",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "numberfield",
+                                "format": "00",
+                                "text": "Numberfield"
+                            },
+                            "name": "MyNumberColumn1",
+                            "designerId": "430dab3e-4c8e-4837-9d59-c6aad4418148",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyNumberField",
+                                    "designerId": "92180bda-4336-4859-8ca9-17e104aaa9fb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.plugin.CellEditing",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clicksToEdit": 1
+                            },
+                            "name": "MyCellEditingPlugin",
+                            "designerId": "27f3f086-b760-4835-bb2a-295a10048b07"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initComponent",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "me.callParent(arguments);",
+                    "",
+                    "var ctrl =  me.getController();",
+                    "",
+                    "// For cell editing need to add controller scope to listeners after view initialized",
+                    "",
+                    "me.down('#fromDt4').editor.listeners.scope = ctrl;",
+                    "me.down('#toDt4').editor.listeners.scope = ctrl;",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initComponent",
+            "designerId": "477ae947-4114-4d81-b250-e06aaa5cbee0"
+        }
+    ]
+}

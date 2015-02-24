@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "datefieldexample",
+        "designer|userClassName": "DateFieldExampleViewController",
+        "mixins": [
+            "{DateFieldMixin : 'Ext.ux.CalendarMatrix.DateFieldMixin'}"
+        ]
+    },
+    "name": "MyContainer2ViewController",
+    "designerId": "980ba3e7-b831-4297-80a4-a3ea2056d158"
+}

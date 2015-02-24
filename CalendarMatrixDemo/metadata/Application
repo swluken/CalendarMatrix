@@ -25,7 +25,8 @@
             "MatrixEx4",
             "MatrixEx2",
             "MatrixEx5",
-            "MatrixEx6"
+            "MatrixEx6",
+            "DateFieldExample"
         ]
     },
     "name": "Application",

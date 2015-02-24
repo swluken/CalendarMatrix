@@ -192,7 +192,7 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
             date = Ext.Date.getLastDateOfMonth(new Date(year, month, 1));
         }
         me.monthPicker.setVisible(false);     
-    me.setStartMonthIdx(Ext.Date.diff(Ext.Date.clearTime(Ext.Date.getFirstDateOfMonth(me.today), true), date, Ext.Date.MONTH));
+        me.setStartMonthIdx(Ext.Date.diff(Ext.Date.clearTime(Ext.Date.getFirstDateOfMonth(me.today), true), date, Ext.Date.MONTH));
 
         me.dispCalGrid();        
     },
@@ -213,7 +213,7 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
 
         var i,j, k, thisItemId, startdt, lastdt, calItem, monthYr, calGridTitle, contItems = [];
 
-    Ext.destroy(me.matrix);
+        Ext.destroy(me.matrix);
         me.matrix = [];  // reset
 
         k = startMonthIdx;
@@ -244,20 +244,8 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
                            maxText: '',
                            disabled: me.getMatrixDisabled(),  
                            startDay: me.getStartDay(),  
-                           renderTpl: me.getRenderTplOverride() ? me.getRenderTplOverride() : Ext.picker.Date.prototype.renderTpl,               
-                           listeners : {
-                               select : function(thisCal) {
-                                   me.fireEvent('select', thisCal);
-                               },
-                               mouseover : function(thisCal, thisDate){
-                                   me.fireEvent('mouseover', thisCal, thisDate);
-                               },
-                               monthselect : function(thisCal, minDate, maxDate){
-                                   me.fireEvent('monthselect', thisCal, minDate, maxDate);                                
-                               }
-                           }
-                          };
-
+                           renderTpl: me.getRenderTplOverride() ? me.getRenderTplOverride() : Ext.picker.Date.prototype.renderTpl
+                };
 
                 me.matrix.push({itemId: thisItemId, monthYr: monthYr});
                 rowItems.push({
@@ -274,14 +262,13 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
                             },
                             items: rowItems
                            });
-
         }
 
         var card = me.down('#calGridCard');
         var nextItem = {
             xtype: 'container',
             items: contItems
- 
+    
         };
         card.removeAll(true);
         card.add(nextItem);
@@ -334,7 +321,7 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
             if (rangeSelectMode === 'startdate'){
                 me.rangeDt1 = selDt;
                 me.rangeDate1 = selDate;
-                if (!Ext.isEmpty(me.rangeDt2) && me.rangeDt1 >= me.rangeDt2){ // Adjust rangeDt2 if prior to rangeDt1
+                if (!Ext.isEmpty(me.rangeDt2) && me.rangeDt1 > me.rangeDt2){ // Adjust rangeDt2 if prior to rangeDt1
                     me.rangeDt2 = null;
                     me.rangeDate2 = null;                 
                 }
@@ -342,7 +329,7 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
             else if (rangeSelectMode === 'enddate'){
                 me.rangeDt2 = selDt;
                 me.rangeDate2 = selDate;
-                if (!Ext.isEmpty(me.rangeDt1) && me.rangeDt1 >= me.rangeDt2){ // Adjust rangeDt1 if prior to rangeDt1
+                if (!Ext.isEmpty(me.rangeDt1) && me.rangeDt1 > me.rangeDt2){ // Adjust rangeDt1 if prior to rangeDt1
                     me.rangeDt1 = null;
                     me.rangeDate1 = null;                 
                 }
@@ -408,7 +395,7 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
 
         for (i=0; i<me.matrix.length; i++){
             matrixItem = me.down('#'+me.matrix[i].itemId+'_mc');
-            matrixItem.setDisabled(me.matrixDisabled);
+            matrixItem.setDisabled(me.getMatrixDisabled());   // SWL UPDATED 2/21/15
             if (matrixItem.rendered){
                matrixItem.fullUpdate();
             }

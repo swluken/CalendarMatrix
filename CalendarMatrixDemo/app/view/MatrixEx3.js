@@ -209,11 +209,11 @@ Ext.define('CalendarMatrix.view.MatrixEx3', {
                 return (cellDate < today);
             },
             customClsFn: function(cellDate){ // Speical styling for weekend days
-               var customCls = '';
-               if ([0,6].indexOf(parseInt(Ext.Date.format(cellDate, 'w'))) !== -1) {
-                   customCls = 'weekend';
-               }
-               return customCls;
+                var customCls = '';
+                if ([0,6].indexOf(parseInt(Ext.Date.format(cellDate, 'w'))) !== -1) {
+                    customCls = 'weekend';
+                }
+                return customCls;
             }
         });
 

@@ -25,6 +25,7 @@ Ext.define('CalendarMatrix.view.MyViewport', {
         'CalendarMatrix.view.MatrixEx4',
         'CalendarMatrix.view.MatrixEx5',
         'CalendarMatrix.view.MatrixEx6',
+        'CalendarMatrix.view.DateFieldExample',
         'Ext.tab.Panel'
     ],
 
@@ -64,6 +65,10 @@ Ext.define('CalendarMatrix.view.MyViewport', {
                 {
                     xtype: 'matrixex6',
                     title: 'Range #3'
+                },
+                {
+                    xtype: 'datefieldexample',
+                    title: 'Combination'
                 }
             ]
         }

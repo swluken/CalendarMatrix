@@ -8,6 +8,8 @@ CalendarMatrix is an EXTJS 5.x component that extends Ext.picker.Date to provide
 - Multi "random" date selection example
 - Single Date selection popup demonstrating numerous advanced features including: International Language support, customized HTML within each date cell, custom weekend styling, customized disabled dates
 - TripAdvisor, Trivago, Expedia and Travelocity styled date range selector examples
+- Combination example of Single Date selection and Range selection within Forms, Grids (row editing and cell editing).
+  Demonstrates custom implementation of CalendarMatrix utilizing Ext.form.field.Date which allows manual date input with validation, but where CalendarMatrix replaces the standard datepicker 
 
 <br><b>CalendarMatrix Demo:</b> http://www.gomainerentals.com/Sencha/CalendarMatrixDemo/index.html
 

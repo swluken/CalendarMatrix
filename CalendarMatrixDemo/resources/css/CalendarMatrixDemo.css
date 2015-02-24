@@ -17,7 +17,7 @@
     text-align:center;
     padding-top: 15px;
     font-size: 24px;
-    color: #eee;
+    color: #bebebe;
     font-family:"FontAwesome";
     content:"\f00d"
 }
@@ -424,13 +424,13 @@
 
 
 .matrix-ex5-cal .x-datepicker-disabled .x-datepicker-date {
-  background-color: white;
-  cursor: default;
-  color: #aaaaaa; }
+    background-color: white;
+    cursor: default;
+    color: #aaaaaa; }
 
 .matrix-ex5-cal .x-datepicker-disabled div.x-datepicker-date:hover {
-  background-color: white;
-  color: #aaaaaa; }
+    background-color: white;
+    color: #aaaaaa; }
 
 
 .matrix-ex5-cal .weekend .x-datepicker-date{
@@ -591,11 +591,11 @@
     border-color: #0087f5;
 }
 .matrix-ex6-cal .x-datepicker {
-  border-width: 3px 3px 3px 0px !important;
-  border-style: solid;
-  border-color: #0087f5;
-  background-color: white;
-  width: 236px; }
+    border-width: 3px 3px 3px 0px !important;
+    border-style: solid;
+    border-color: #0087f5;
+    background-color: white;
+    width: 236px; }
 
 
 .matrix-ex6-cal .cal-grid-toolbar{
@@ -646,3 +646,56 @@
     color: white;
 }
 
+/*********************  Date Field Combination Example *********************/
+
+.datefield-mixin-window .cal-grid  .x-datepicker-date:hover{
+    /*  background-color: #0087f5;  
+    color: #ffffff; */
+    cursor: pointer;
+}
+
+.datefield-mixin-window .cal-grid .x-datepicker-disabled .x-datepicker-date,
+.datefield-mixin-window .cal-grid .x-datepicker-disabled .x-datepicker-date:hover {
+    background-color: #f6f6f6;
+    color: #777777;
+    cursor: default;
+}
+
+.datefield-mixin-window .cal-grid .x-datepicker-prevday .x-datepicker-date,
+.datefield-mixin-window .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{ 
+    background-color: white;
+    color: white; 
+    cursor: default;
+}
+
+/* SELECTED COLORS MUST BE AFTER PRIOR COLOR CLS ... and have matching attribute defs */
+.datefield-mixin-window .cal-grid .matrix-cal-selected .x-datepicker-date{
+    background-color: #D1EAFF;
+    color: #0065B8;
+    font-weight: normal;
+}
+.datefield-mixin-window .cal-grid .matrix-cal-startdt .x-datepicker-date,
+.datefield-mixin-window .cal-grid .matrix-cal-enddt .x-datepicker-date{
+    background-color: #00355F;
+    color: white;
+}
+
+.date-input-selected .x-form-trigger-wrap-default {
+    border-width: 3px;
+}
+
+.datefield-mixin-window .cal-grid .priordate.x-datepicker-cell{  /* Custom class to highlight prior selected date when hovering new dates prior to new selection */
+    border-color: #00355F;
+    border-width: 2px;
+}
+
+.date-field-example .fa-icon-remove:before{
+    padding-top: 20px;
+}
+.date-field-example .fa-icon-remove:hover:before{
+    color: #2973B8;
+}
+
+.x-mask{  /* Proposed Mask opacity when modal windows used */
+    opacity: .3;
+}

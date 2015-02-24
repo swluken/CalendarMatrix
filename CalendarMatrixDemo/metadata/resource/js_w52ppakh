@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_w52ppakh",
+        "url": "./app/view/PickerOverride.js",
+        "x-compile": true
+    },
+    "name": "js",
+    "designerId": "113e06e9-f219-404b-984c-7fb5b665cfab"
+}

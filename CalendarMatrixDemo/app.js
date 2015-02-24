@@ -39,7 +39,8 @@ Ext.application({
         'MatrixEx4',
         'MatrixEx2',
         'MatrixEx5',
-        'MatrixEx6'
+        'MatrixEx6',
+        'DateFieldExample'
     ],
     controllers: [
         'MyGlobalController'

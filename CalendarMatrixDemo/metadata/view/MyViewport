@@ -178,6 +178,27 @@
                         }
                     ],
                     "masterInstanceId": "1cfd805c-c9e5-4b67-bfa9-468abf72dbd3"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Combination"
+                    },
+                    "name": "datefieldexample1",
+                    "designerId": "6305ba19-3aa6-40b2-a30e-0552aaab3f6d",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "27047571-c46a-4881-bbd4-eee6e1b4c05a"
                 }
             ]
         }

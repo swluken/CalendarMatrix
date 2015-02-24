@@ -56,7 +56,7 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
             priorMatrixDts = priorValues.length === 0 ? null : me.matrixCont.getPriorMatrixDts(),
             dtIdx,
             selectedValues = Ext.isEmpty(me.matrixCont.selectedValues) ? [] : me.matrixCont.selectedValues,
-			monthTextFn = Ext.isEmpty(me.matrixCont) ? '' : me.matrixCont.getMonthTextFn();
+            monthTextFn = Ext.isEmpty(me.matrixCont) ? '' : me.matrixCont.getMonthTextFn();
 
         if (startingPos < 0) {
             startingPos += 7;
@@ -96,7 +96,7 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
                 }, true);
             }
             if (value == newDate) {
-            	// This logic not utilized for CalendarMatrix 
+              // This logic not utilized for CalendarMatrix 
                 me.activeCell = cell;
                 me.eventEl.dom.setAttribute('aria-activedescendant', cell.id);
                 cell.setAttribute('aria-selected', true);
@@ -181,15 +181,16 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
             }
             
             if (rangeSelectMode==='startdate' && !Ext.isEmpty(rangeStartDateModeCls)){
-            	  cls += ' ' + rangeStartDateModeCls;
+                cls += ' ' + rangeStartDateModeCls;
             }
             if (rangeSelectMode==='enddate' && !Ext.isEmpty(rangeEndDateModeCls)){
-            	  cls += ' ' + rangeEndDateModeCls;
+                cls += ' ' + rangeEndDateModeCls;
             }  
                     
-            if (customClsFn){
+            if (customClsFn && !(current < min || current > max)){  // SWL UPDATED 2/21/15
                 // Custom classes added after all others
-                cls += ' ' + customClsFn(current);
+                // Do not apply custom highlighting if outside current month
+                cls += ' ' + customClsFn(current, me.matrixCont);   
             }
             cell.className = cls + ' ' + me.cellCls;
         };
@@ -236,8 +237,8 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
   
     doShowMonthPicker: function(button, e, eOpts) {
         // Disable original month dropdown picker method for CalendarMatrix
-    	  var me = this;
-    	  me.fireEvent('monthselect', me, me.minDate, me.maxDate);  	
+        var me = this;
+        me.matrixCont.fireEvent('monthselect', me, me.minDate, me.maxDate);   
     },
 
     handleDateClick: function(e, t) {
@@ -254,6 +255,7 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
             i, calItem;
             
         e.stopEvent();
+      
         if(!me.disabled && t.dateValue && !Ext.fly(t.parentNode).hasCls(me.disabledCellCls)){
           
             // De-select prior selected dates by removing selected cls across all CalendarMatrix cells
@@ -265,7 +267,7 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
                 if (!Ext.isEmpty(rangeEndDtCls)){cells.removeCls(rangeEndDtCls);}         
             }
             me.setValue(new Date(t.dateValue));
-            me.fireEvent('select', me, me.value);
+            me.matrixCont.fireEvent('select', me, me.value);
             if (handler) {
                 handler.call(me.scope || me, me, me.value);
             }
@@ -304,10 +306,12 @@ Ext.define('Ext.ux.CalendarMatrix.DateMatrixPickerExtension', {
     
     handleDateMouseOver: function(e, t) {
       // Fire 'mouseover' event for CalendarMatrix if not disabled
-        var me = this
+        var me = this;
+      
         e.stopEvent();
         if(!me.disabled && t.dateValue && !Ext.fly(t.parentNode).hasCls(me.disabledCellCls)){
-            me.fireEvent('mouseover', me, new Date(t.dateValue));
+            me.matrixCont.fireEvent('mouseover', me, new Date(t.dateValue));
+            
         }
     },  
 });
