@@ -290,7 +290,8 @@
                                         "labelStyle": null,
                                         "labelWidth": 160,
                                         "listeners": [
-                                            "{trigcalmatrix: 'onFromDtMixin'}"
+                                            "{trigcalmatrix: 'onFromDtMixin',",
+                                            "focus: 'onDatefieldFocusMixin'}"
                                         ],
                                         "mixinParams": null,
                                         "reference": "fromDt2",
@@ -355,7 +356,8 @@
                                         "labelWidth": 60,
                                         "layout|flex": null,
                                         "listeners": [
-                                            "{trigcalmatrix: 'onToDtMixin'}"
+                                            "{trigcalmatrix: 'onToDtMixin',",
+                                            "focus: 'onDatefieldFocusMixin'}"
                                         ],
                                         "mixinParams": null,
                                         "readOnly": null,
@@ -564,7 +566,8 @@
                                         "itemId": null,
                                         "listeners": [
                                             "{",
-                                            "trigcalmatrix: 'onFromDtMixin'",
+                                            "trigcalmatrix: 'onFromDtMixin',",
+                                            "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
                                         "reference": "fromDt3",
@@ -630,7 +633,8 @@
                                         ],
                                         "listeners": [
                                             "{",
-                                            "trigcalmatrix: 'onToDtMixin'",
+                                            "trigcalmatrix: 'onToDtMixin',",
+                                            "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
                                         "reference": "toDt3",
@@ -794,7 +798,8 @@
                                         "itemId": null,
                                         "listeners": [
                                             "{",
-                                            "trigcalmatrix: 'onFromDtMixin'",
+                                            "trigcalmatrix: 'onFromDtMixin',",
+                                            "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
                                         "reference": "fromDt4edit",
@@ -864,7 +869,8 @@
                                         "itemId": null,
                                         "listeners": [
                                             "{",
-                                            "trigcalmatrix: 'onToDtMixin'",
+                                            "trigcalmatrix: 'onToDtMixin',",
+                                            "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
                                         "reference": "toDt4edit",

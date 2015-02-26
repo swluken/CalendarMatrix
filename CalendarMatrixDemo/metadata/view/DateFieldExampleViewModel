@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "datefieldexample",
+        "designer|userAlias": "CalendarMatrix.view.DateFieldExampleViewModel",
         "designer|userClassName": "DateFieldExampleViewModel"
     },
     "name": "MyContainer2ViewModel",

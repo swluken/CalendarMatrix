@@ -15,7 +15,7 @@
 
 Ext.define('CalendarMatrix.view.DateFieldExampleViewModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.datefieldexample',
+    alias: 'viewmodel.CalendarMatrix.view.DateFieldExampleViewModel',
 
     requires: [
         'Ext.data.Store',

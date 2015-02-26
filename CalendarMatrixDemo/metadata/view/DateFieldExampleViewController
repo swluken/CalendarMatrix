@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "datefieldexample",
+        "designer|userAlias": "CalendarMatrix.view.DateFieldExampleViewController",
         "designer|userClassName": "DateFieldExampleViewController",
         "mixins": [
             "{DateFieldMixin : 'Ext.ux.CalendarMatrix.DateFieldMixin'}"

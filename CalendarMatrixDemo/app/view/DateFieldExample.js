@@ -33,9 +33,9 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
         'Ext.grid.plugin.CellEditing'
     ],
 
-    controller: 'datefieldexample',
+    controller: 'CalendarMatrix.view.DateFieldExampleViewController',
     viewModel: {
-        type: 'datefieldexample'
+        type: 'CalendarMatrix.view.DateFieldExampleViewModel'
     },
     cls: 'date-field-example',
     style: 'background-color: white; margin: 0px 5px;',
@@ -131,7 +131,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                     xtype: 'datefield',
                                     useCalendarMatrix: true,
                                     listeners: {
-                                        trigcalmatrix: 'onFromDtMixin'
+                                        trigcalmatrix: 'onFromDtMixin',
+                                        focus: 'onDatefieldFocusMixin'
                                     },
                                     dateFieldMixinConfig: {
                                         fromRef: 'fromDt2',
@@ -147,7 +148,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                     xtype: 'datefield',
                                     useCalendarMatrix: true,
                                     listeners: {
-                                        trigcalmatrix: 'onToDtMixin'
+                                        trigcalmatrix: 'onToDtMixin',
+                                        focus: 'onDatefieldFocusMixin'
                                     },
                                     dateFieldMixinConfig: {
                                         fromRef: 'fromDt2',
@@ -214,7 +216,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 xtype: 'datefield',
                                 useCalendarMatrix: true,
                                 listeners: {
-                                    trigcalmatrix: 'onFromDtMixin'
+                                    trigcalmatrix: 'onFromDtMixin',
+                                    focus: 'onDatefieldFocusMixin'
                                 },
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt3',
@@ -234,7 +237,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 xtype: 'datefield',
                                 useCalendarMatrix: true,
                                 listeners: {
-                                    trigcalmatrix: 'onToDtMixin'
+                                    trigcalmatrix: 'onToDtMixin',
+                                    focus: 'onDatefieldFocusMixin'
                                 },
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt3',
@@ -287,7 +291,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 xtype: 'datefield',
                                 useCalendarMatrix: true,
                                 listeners: {
-                                    trigcalmatrix: 'onFromDtMixin'
+                                    trigcalmatrix: 'onFromDtMixin',
+                                    focus: 'onDatefieldFocusMixin'
                                 },
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt4',
@@ -310,7 +315,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 xtype: 'datefield',
                                 useCalendarMatrix: true,
                                 listeners: {
-                                    trigcalmatrix: 'onToDtMixin'
+                                    trigcalmatrix: 'onToDtMixin',
+                                    focus: 'onDatefieldFocusMixin'
                                 },
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt4',

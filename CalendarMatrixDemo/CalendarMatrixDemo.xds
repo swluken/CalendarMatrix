@@ -14,7 +14,7 @@
                 "width": null
             }
         },
-        "urlPrefix": "http://localhost/CalendarMatrixDemo/",
+        "urlPrefix": "http://localhost/CalendarMatrix-master/CalendarMatrixDemo/",
         "exportPath": "",
         "spacesToIndent": 4,
         "sdkPath": "",
@@ -24,7 +24,7 @@
         "buildShouldOverwriteIndex": true,
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": false,
-        "lockUrlPrefix": false,
+        "lockUrlPrefix": true,
         "installStatus": "Not Installed",
         "displayfield-ExtBox1-1124-inputEl": "a new version of the framework is available",
         "displayfield-ExtBox1-1152-inputEl": "a new version of the framework is available",

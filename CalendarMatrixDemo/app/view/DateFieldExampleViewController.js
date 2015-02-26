@@ -15,7 +15,7 @@
 
 Ext.define('CalendarMatrix.view.DateFieldExampleViewController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.datefieldexample',
+    alias: 'controller.CalendarMatrix.view.DateFieldExampleViewController',
 
     mixins: {
         DateFieldMixin: 'Ext.ux.CalendarMatrix.DateFieldMixin'

@@ -26,7 +26,8 @@ Ext.define('CalendarMatrix.view.MyViewport', {
         'CalendarMatrix.view.MatrixEx5',
         'CalendarMatrix.view.MatrixEx6',
         'CalendarMatrix.view.DateFieldExample',
-        'Ext.tab.Panel'
+        'Ext.tab.Panel',
+        'Ext.tab.Tab'
     ],
 
     viewModel: {

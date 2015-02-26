@@ -63,7 +63,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "28d4bae7-cf04-4c44-80df-cddad17ced17"
+                    "masterInstanceId": "28d4bae7-cf04-4c44-80df-cddad17ced17",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "57ed18fa-832a-401a-896d-d62f9424452a"
+                        }
+                    ]
                 },
                 {
                     "type": "linkedinstance",
@@ -87,7 +99,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "2a0d5214-92eb-4e13-88dc-8687ebc06932"
+                    "masterInstanceId": "2a0d5214-92eb-4e13-88dc-8687ebc06932",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "0900251c-a709-4c53-9fd9-ecb8164f06c5"
+                        }
+                    ]
                 },
                 {
                     "type": "linkedinstance",
@@ -111,7 +135,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "9edbe16f-d681-424b-9df7-791533010ca9"
+                    "masterInstanceId": "9edbe16f-d681-424b-9df7-791533010ca9",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "12fc3ac1-d810-48aa-854f-5b67c8abb588"
+                        }
+                    ]
                 },
                 {
                     "type": "linkedinstance",
@@ -135,7 +171,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "547a6483-6a20-492b-84c0-db987a9cdfa9"
+                    "masterInstanceId": "547a6483-6a20-492b-84c0-db987a9cdfa9",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "3a8a3a86-609f-4279-b4c0-6a2499aa0e71"
+                        }
+                    ]
                 },
                 {
                     "type": "linkedinstance",
@@ -156,7 +204,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "2ffec39b-a60a-4994-bb8f-082988a54ac6"
+                    "masterInstanceId": "2ffec39b-a60a-4994-bb8f-082988a54ac6",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig4",
+                            "designerId": "9df75c98-1416-46f8-a978-1e038b774004"
+                        }
+                    ]
                 },
                 {
                     "type": "linkedinstance",
@@ -177,7 +237,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "1cfd805c-c9e5-4b67-bfa9-468abf72dbd3"
+                    "masterInstanceId": "1cfd805c-c9e5-4b67-bfa9-468abf72dbd3",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig5",
+                            "designerId": "436066ed-f3e7-47c7-9169-06bb653f0a6f"
+                        }
+                    ]
                 },
                 {
                     "type": "linkedinstance",
@@ -189,7 +261,7 @@
                     "userConfig": {
                         "title": "Combination"
                     },
-                    "name": "datefieldexample1",
+                    "name": "datefieldexample",
                     "designerId": "6305ba19-3aa6-40b2-a30e-0552aaab3f6d",
                     "customConfigs": [
                         {
@@ -198,7 +270,19 @@
                             "type": "string"
                         }
                     ],
-                    "masterInstanceId": "27047571-c46a-4881-bbd4-eee6e1b4c05a"
+                    "masterInstanceId": "27047571-c46a-4881-bbd4-eee6e1b4c05a",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig6",
+                            "designerId": "80ac531d-36f5-48be-9345-d9c9099332a2"
+                        }
+                    ]
                 }
             ]
         }
