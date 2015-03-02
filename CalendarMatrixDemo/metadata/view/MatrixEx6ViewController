@@ -158,7 +158,7 @@
                     "if (rangeSelectMode==='startdate' && Ext.isEmpty(rangeDt2)){",
                     "    // auto-select end date button and redisplay calendar to accept end date",
                     "    me.onEndBtnClick(me.lookupReference('endBtn'));",
-                    "    myWindow.down('#priorCalGridMatrix').setVisible(false); ",
+                    "  //  myWindow.down('#priorCalGridMatrix').setVisible(false);",
                     "}",
                     "if (rangeSelectMode==='enddate' && Ext.isEmpty(rangeDt1)){",
                     "    // auto-select start date button and redisplay calendar to accept start date",

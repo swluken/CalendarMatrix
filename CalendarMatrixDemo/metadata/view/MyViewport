@@ -73,7 +73,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig",
-                            "designerId": "57ed18fa-832a-401a-896d-d62f9424452a"
+                            "designerId": "3a7d6bed-27b4-4b50-81d9-20bee4a72646"
                         }
                     ]
                 },
@@ -109,7 +109,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig1",
-                            "designerId": "0900251c-a709-4c53-9fd9-ecb8164f06c5"
+                            "designerId": "d28737e2-debe-48cf-8531-20cbadd50deb"
                         }
                     ]
                 },
@@ -145,7 +145,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig2",
-                            "designerId": "12fc3ac1-d810-48aa-854f-5b67c8abb588"
+                            "designerId": "ffb4caa9-7b30-43d3-9e50-9899dc8e2063"
                         }
                     ]
                 },
@@ -181,7 +181,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig3",
-                            "designerId": "3a8a3a86-609f-4279-b4c0-6a2499aa0e71"
+                            "designerId": "a77e2e72-50f4-462a-8615-51d05ad962ce"
                         }
                     ]
                 },
@@ -214,7 +214,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig4",
-                            "designerId": "9df75c98-1416-46f8-a978-1e038b774004"
+                            "designerId": "89c7b685-b94b-4dd9-bb17-0b3be919198b"
                         }
                     ]
                 },
@@ -247,7 +247,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig5",
-                            "designerId": "436066ed-f3e7-47c7-9169-06bb653f0a6f"
+                            "designerId": "5a27c921-eb6a-43f8-b4a3-e3f56ed9a75b"
                         }
                     ]
                 },
@@ -280,7 +280,7 @@
                             },
                             "codeClass": null,
                             "name": "TabConfig6",
-                            "designerId": "80ac531d-36f5-48be-9345-d9c9099332a2"
+                            "designerId": "426517cf-5c21-4d18-8470-7b99d6e5c31d"
                         }
                     ]
                 }

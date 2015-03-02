@@ -13,5 +13,38 @@
         ]
     },
     "name": "MyContainer2ViewController",
-    "designerId": "980ba3e7-b831-4297-80a4-a3ea2056d158"
+    "designerId": "980ba3e7-b831-4297-80a4-a3ea2056d158",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "datefield",
+                    "myViewConfig",
+                    "calendarMatrix",
+                    "myWindow",
+                    "priorCalGridMatrix",
+                    "nextCalGridMatrix",
+                    "firstMatrixItem",
+                    "lastMatrixItem"
+                ],
+                "fn": "onDisableNavAfterToday",
+                "implHandler": [
+                    "var today= Ext.Date.clearTime(new Date(Date(Ext.Date.now())), true);",
+                    "",
+                    "if (lastMatrixItem.maxDate >= today){",
+                    "    nextCalGridMatrix.setVisible(false);",
+                    "",
+                    "}"
+                ]
+            },
+            "name": "onDisableNavAfterToday",
+            "designerId": "1f820736-6715-4ec9-8090-ecf67c4a60b7"
+        }
+    ]
 }

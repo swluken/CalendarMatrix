@@ -699,3 +699,19 @@
 .x-mask{  /* Proposed Mask opacity when modal windows used */
     opacity: .3;
 }
+
+
+
+/* Use Month-Picker arrows for main calendar matrix panel */
+.cal-grid-prior-btn-datefieldmixin{
+    margin-left: 13px;
+    top: 8px !important;
+}
+.cal-grid-next-btn-datefieldmixin{
+    margin-right: 23px;
+    top: 8px !important;
+}
+.cal-grid-prior-btn-datefieldmixin:hover,
+.cal-grid-next-btn-datefieldmixin:hover{
+    opacity: 1;
+}

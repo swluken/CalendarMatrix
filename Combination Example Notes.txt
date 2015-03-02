@@ -1,0 +1,41 @@
+Added Combination example of Single Date selection plus Range selection within Forms and Grids (both row and cell editors).  It demonstrates custom implementation of CalendarMatrix utilizing Ext.form.field.Date which allows manual date input with validation, but where CalendarMatrix replaces the standard datepicker. 
+
+- If both dates empty and user clicks on FromDate, then implement SINGLE selection mode (i.e. FromDate only input)
+- If both dates empty and user clicks on ToDate, then implement RANGE selection mode.  
+  After ToDate selected,  ToDate is anchored and user allowed to continue selection of FromDate.
+  This one stroke method also applies for empty selection when user clicks ToDate first.
+- If both dates populated then accept either ToDate or FromDate based on datefield selection
+
+DateFieldMixin.js is provided which demonstrates how a Mixin class can be used to simplify repetitive implementations of common functionality.
+Refer to ./app/ux/CalendarMatrix/DateFieldMixin.js for additional documentation.
+
+After referencing DateFieldMixin in you View Controller, Implementation is as simple as:
+   {
+      xtype: 'datefield',
+      useCalendarMatrix: true,
+      listeners: {
+          trigcalmatrix: 'onFromDtMixin',
+          focus: 'onDatefieldFocusMixin'
+      },
+      dateFieldMixinConfig: {
+          fromRef: 'fromDt2',
+          toRef: 'toDt2'
+      },
+      reference: 'fromDt2',
+  },
+  {
+      xtype: 'datefield',
+      useCalendarMatrix: true,
+      listeners: {
+          trigcalmatrix: 'onToDtMixin',
+          focus: 'onDatefieldFocusMixin'
+      },
+      dateFieldMixinConfig: {
+          fromRef: 'fromDt2',
+          toRef: 'toDt2'
+      },
+      reference: 'toDt2'
+  }
+
+
+<br><b>CalendarMatrix Demo:</b> http://www.gomainerentals.com/Sencha/CalendarMatrixDemo/index.html

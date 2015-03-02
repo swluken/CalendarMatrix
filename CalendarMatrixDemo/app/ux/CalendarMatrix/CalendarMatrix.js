@@ -137,6 +137,7 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
         // Go to starting matrix unless we started outside current date
         me.setStartMonthIdx(0);
         me.dispCalGrid();
+    me.fireEvent('monthnav', me); // Can be used by external processes to conditionally hide month navigation arrows
     },
     
     onTodayArrowClick: function(button, e, eOpts) {
@@ -194,7 +195,8 @@ Ext.define('Ext.ux.CalendarMatrix.CalendarMatrix', {
         me.monthPicker.setVisible(false);     
         me.setStartMonthIdx(Ext.Date.diff(Ext.Date.clearTime(Ext.Date.getFirstDateOfMonth(me.today), true), date, Ext.Date.MONTH));
 
-        me.dispCalGrid();        
+        me.dispCalGrid();      
+    me.fireEvent('monthnav', me); // Can be used by external processes to conditionally hide month navigation arrows
     },
 
     onCalGridAfterRender: function(component, eOpts) {

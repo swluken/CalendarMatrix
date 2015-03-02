@@ -65,6 +65,9 @@
             "userConfig": {
                 "bodyPadding": 10,
                 "controller": null,
+                "fieldDefaults": [
+                    "{msgTarget: 'side'}"
+                ],
                 "height": null,
                 "layout": null,
                 "title": null,
@@ -86,6 +89,9 @@
                         "title": ""
                     },
                     "name": "MyFieldSet",
+                    "configAlternates": {
+                        "combineErrors": "boolean"
+                    },
                     "designerId": "c05d66a1-f2ce-426f-a8ff-b38ef19f6e70",
                     "cn": [
                         {
@@ -140,7 +146,9 @@
                                         "labelStyle": null,
                                         "labelWidth": 160,
                                         "listeners": [
-                                            "{trigcalmatrix: 'onFromDtMixin'}"
+                                            "{trigcalmatrix: 'onFromDtMixin',",
+                                            "handlemonthnav: 'onDisableNavAfterToday',",
+                                            "focus: 'onDatefieldFocusMixin'}"
                                         ],
                                         "mixinParams": null,
                                         "reference": "fromDt1",
@@ -530,7 +538,19 @@
                                 "text": "Textfield"
                             },
                             "name": "MyColumn",
-                            "designerId": "260c619f-fd6f-4fea-8731-b3fcf28bbe56"
+                            "designerId": "260c619f-fd6f-4fea-8731-b3fcf28bbe56",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTextField1",
+                                    "designerId": "61a787c4-b623-43bc-b174-a6027de41a75"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.column.Date",
@@ -560,7 +580,8 @@
                                             "{",
                                             "fromRef: 'fromDt3',",
                                             "toRef: 'toDt3',",
-                                            "windowFromTitle: 'Select Begin Date:'",
+                                            "windowFromTitle: 'Select Begin Date:',",
+                                            "windowToTitle: 'Select End Date:'",
                                             "}"
                                         ],
                                         "itemId": null,
@@ -570,6 +591,7 @@
                                             "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
+                                        "msgTarget": "side",
                                         "reference": "fromDt3",
                                         "useCalendarMatrix": true
                                     },
@@ -627,8 +649,7 @@
                                         "dateFieldMixinConfig": [
                                             "{",
                                             "fromRef: 'fromDt3',",
-                                            "toRef: 'toDt3',",
-                                            "windowToTitle: 'Select End Date:'",
+                                            "toRef: 'toDt3'",
                                             "}"
                                         ],
                                         "listeners": [
@@ -637,6 +658,7 @@
                                             "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
+                                        "msgTarget": "side",
                                         "reference": "toDt3",
                                         "useCalendarMatrix": true
                                     },
@@ -680,7 +702,19 @@
                                 "text": "Numberfield"
                             },
                             "name": "MyNumberColumn1",
-                            "designerId": "0854e569-f00a-4ace-8c05-2b3d0ef3fe6f"
+                            "designerId": "0854e569-f00a-4ace-8c05-2b3d0ef3fe6f",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyNumberField1",
+                                    "designerId": "e2fddc6c-0fe9-46dd-9b2f-0e9446f46d5b"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.grid.plugin.RowEditing",
@@ -690,7 +724,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "clicksToEdit": 1
+                                "clicksToEdit": 1,
+                                "errorSummary": false
                             },
                             "name": "MyRowEditingPlugin",
                             "designerId": "f2ac812c-3246-4a81-8b7b-fce202f41634"
@@ -792,6 +827,7 @@
                                             "fromRef: 'fromDt4',",
                                             "toRef: 'toDt4',",
                                             "windowFromTitle: 'Select Begin Date:',",
+                                            "windowToTitle: 'Select End Date:',",
                                             "cellEditMode: true",
                                             "}"
                                         ],
@@ -802,6 +838,7 @@
                                             "focus: 'onDatefieldFocusMixin'",
                                             "}"
                                         ],
+                                        "msgTarget": null,
                                         "reference": "fromDt4edit",
                                         "useCalendarMatrix": true
                                     },
@@ -862,7 +899,6 @@
                                             "{",
                                             "fromRef: 'fromDt4',",
                                             "toRef: 'toDt4',",
-                                            "windowToTitle: 'Select End Date:',",
                                             "cellEditMode: true",
                                             "}"
                                         ],

@@ -19,5 +19,15 @@ Ext.define('CalendarMatrix.view.DateFieldExampleViewController', {
 
     mixins: {
         DateFieldMixin: 'Ext.ux.CalendarMatrix.DateFieldMixin'
+    },
+
+    onDisableNavAfterToday: function(datefield, myViewConfig, calendarMatrix, myWindow, priorCalGridMatrix, nextCalGridMatrix, firstMatrixItem, lastMatrixItem) {
+        var today= Ext.Date.clearTime(new Date(Date(Ext.Date.now())), true);
+
+        if (lastMatrixItem.maxDate >= today){
+            nextCalGridMatrix.setVisible(false);
+
+        }
     }
+
 });

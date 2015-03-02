@@ -28,8 +28,8 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
         'Ext.view.Table',
         'Ext.grid.column.Date',
         'Ext.grid.column.Number',
-        'Ext.grid.plugin.RowEditing',
         'Ext.form.field.Number',
+        'Ext.grid.plugin.RowEditing',
         'Ext.grid.plugin.CellEditing'
     ],
 
@@ -53,6 +53,9 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
         {
             xtype: 'form',
             bodyPadding: 10,
+            fieldDefaults: {
+                msgTarget: 'side'
+            },
             items: [
                 {
                     xtype: 'fieldset',
@@ -76,7 +79,9 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                     xtype: 'datefield',
                                     useCalendarMatrix: true,
                                     listeners: {
-                                        trigcalmatrix: 'onFromDtMixin'
+                                        trigcalmatrix: 'onFromDtMixin',
+                                        handlemonthnav: 'onDisableNavAfterToday',
+                                        focus: 'onDatefieldFocusMixin'
                                     },
                                     dateFieldMixinConfig: {
                                         fromRef: 'fromDt1',
@@ -204,7 +209,10 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                         {
                             xtype: 'gridcolumn',
                             dataIndex: 'textfield',
-                            text: 'Textfield'
+                            text: 'Textfield',
+                            editor: {
+                                xtype: 'textfield'
+                            }
                         },
                         {
                             xtype: 'datecolumn',
@@ -222,9 +230,11 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt3',
                                     toRef: 'toDt3',
-                                    windowFromTitle: 'Select Begin Date:'
+                                    windowFromTitle: 'Select Begin Date:',
+                                    windowToTitle: 'Select End Date:'
                                 },
-                                reference: 'fromDt3'
+                                reference: 'fromDt3',
+                                msgTarget: 'side'
                             }
                         },
                         {
@@ -242,23 +252,27 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 },
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt3',
-                                    toRef: 'toDt3',
-                                    windowToTitle: 'Select End Date:'
+                                    toRef: 'toDt3'
                                 },
-                                reference: 'toDt3'
+                                reference: 'toDt3',
+                                msgTarget: 'side'
                             }
                         },
                         {
                             xtype: 'numbercolumn',
                             dataIndex: 'numberfield',
                             text: 'Numberfield',
-                            format: '00'
+                            format: '00',
+                            editor: {
+                                xtype: 'numberfield'
+                            }
                         }
                     ],
                     plugins: [
                         {
                             ptype: 'rowediting',
-                            clicksToEdit: 1
+                            clicksToEdit: 1,
+                            errorSummary: false
                         }
                     ]
                 },
@@ -298,6 +312,7 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                     fromRef: 'fromDt4',
                                     toRef: 'toDt4',
                                     windowFromTitle: 'Select Begin Date:',
+                                    windowToTitle: 'Select End Date:',
                                     cellEditMode: true
                                 },
                                 reference: 'fromDt4edit'
@@ -321,7 +336,6 @@ Ext.define('CalendarMatrix.view.DateFieldExample', {
                                 dateFieldMixinConfig: {
                                     fromRef: 'fromDt4',
                                     toRef: 'toDt4',
-                                    windowToTitle: 'Select End Date:',
                                     cellEditMode: true
                                 },
                                 reference: 'toDt4edit'
