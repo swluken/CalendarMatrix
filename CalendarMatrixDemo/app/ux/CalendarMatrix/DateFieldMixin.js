@@ -123,7 +123,7 @@ Ext.define('Ext.ux.CalendarMatrix.DateFieldMixin', {
                 if (retRangeSelectMode === 'startdate' && !Ext.isEmpty(matrixCont.rangeDt2)){
                     return (cellDate > matrixCont.rangeDate2);
                 }
-                if (retRangeSelectMode === 'enddate' || !Ext.isEmpty(matrixCont.rangeDt1)){
+                if (retRangeSelectMode === 'enddate' && !Ext.isEmpty(matrixCont.rangeDt1)){
                     return (cellDate < matrixCont.rangeDate1);
                 }
                 return false;
