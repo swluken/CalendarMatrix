@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ext JS Calendar Sample</title>
+
+    <!-- GC -->
+    <link rel="stylesheet" type="text/css" href="resources/css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/CalendarMatrix.css" />
+ <!--<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57032113-1', 'auto');
+  ga('send', 'pageview');
+
+</script>-->
+	<script type="text/javascript" src="shared/include-ext.js"></script>
+  <!--  <script type="text/javascript" src="./shared/options-toolbar.js"></script>   -->
+
+    <script type="text/javascript">
+        Ext.Loader.setConfig({
+            enabled: true,
+            paths: {
+                'Ext.calendar': 'src',
+				'Ext.ux.CalendarMatrix': './src/ux/CalendarMatrix/'
+            }
+        });
+        Ext.require([
+            //'Ext.diag.layout.Context',
+            //'Ext.diag.layout.ContextItem',
+            'Ext.calendar.App',
+			'Ext.ux.CalendarMatrix.DateMatrixPickerExtension',
+            'Ext.ux.CalendarMatrix.CalendarMatrix'
+        ]);
+        Ext.onReady(function(){
+            // launch the app:
+            Ext.create('Ext.calendar.App');
+            
+            // update the header logo date:
+            document.getElementById('logo-body').innerHTML = new Date().getDate();
+        });
+    </script>
+</head>
+<body>
+    <div style="display:none;">
+    <div id="app-header-content">
+        <div id="app-logo">
+            <div class="logo-top">&nbsp;</div>
+            <div id="logo-body">&nbsp;</div>
+            <div class="logo-bottom">&nbsp;</div>
+        </div>
+        <h1>Ext JS Calendar</h1>
+        <span id="app-msg" class="x-hidden"></span>
+    </div>
+    </div>
+</body>
+</html>
