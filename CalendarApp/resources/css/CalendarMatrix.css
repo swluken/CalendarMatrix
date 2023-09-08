@@ -1,0 +1,115 @@
+.matrix-cal{
+    background-color: white;
+    border: 1px solid #3892D3;
+}
+
+.cal-grid .x-datepicker-month .x-btn-split-right{
+    /* Hide dropdown associated with split month button */
+    background-image: none;
+}
+.cal-grid .x-datepicker-next, .cal-grid .x-datepicker-prev{
+    /* Hide left/right arrows on each calendar */  
+    display: none;
+}
+
+
+.cal-grid{
+    margin: 10px 10px 10px 10px;
+}
+
+
+.cal-grid-toolbar{
+    margin-bottom: -8px;
+    padding-top: 5px;
+    height: 35px;
+    /*   top: 10px;
+    left: 0px;
+    z-Index: 200;  */
+}
+.cal-grid-title{
+    text-align: center;
+    font-size: 15px;
+    color: #3892D3;
+    font-weight: bold;
+    padding-top: 1px;
+}
+.cal-grid-today-btn{
+    width: 80px;
+}
+.cal-grid-prior-btn{
+    width: 35px;
+    margin-left: 10px;    
+}
+.cal-grid-next-btn{
+    width: 35px;
+    margin-right: 10px;    
+}
+
+.cal-grid-card{  /* custom styling for container for calendar grid */
+
+}
+.cal-grid .x-mask{  /* used to disable calendars */
+    opacity: 0.1;
+}
+
+.cal-grid .x-datepicker-month .x-btn{
+    cursor: default;
+}
+
+/*  BELOW IS HOW TO STYLE CALENDAR USING EXTJS SELECTORS */
+.cal-grid .x-datepicker-month .x-btn-inner{
+    /*  color: red;  */
+}
+
+.cal-grid .x-datepicker-selected .x-datepicker-date{
+    /*  background-color: yellow;  */
+}
+.cal-grid .x-datepicker-selected {
+    /*   border-color: red;  */
+
+}
+
+.cal-grid .x-datepicker-today{
+    /*   border-color: green;  */
+}
+
+.cal-grid .x-datepicker-disabled .x-datepicker-date{ 
+    background-color: #eee;
+    color: gray; 
+}
+.cal-grid  .x-datepicker-date:hover{
+    background-color: #eee;  
+}
+.cal-grid .x-datepicker-disabled:hover{
+    background-color: #eee;  
+}
+
+/*  ABOVE IS HOW TO STYLE CALENDAR USING EXTJS SELECTORS */
+
+
+
+/* SELECTED COLORS MUST BE AFTER PRIOR COLOR CLS ... and have matching attribute defs */
+.matrix-cal-selected .x-datepicker-date, .matrix-cal-selected x-datepicker-date:hover{
+    background-color: #3892D3;
+    color: white;
+}
+
+.cal-grid .x-btn-split-right:after{  /* Required to disabled split button arrow on month label */
+    padding-right: 0px !important;
+    background-image: none !important;
+    width: 0px !important;
+}
+
+/*****************  CUSTOM UPDATES **********************/
+
+.matrix-cal-year .cal-grid .x-datepicker-prevday .x-datepicker-date{ 
+    background-color: transparent;
+    color: transparent; 
+}
+
+.matrix-cal-year .cal-grid .x-datepicker-prevday .x-datepicker-date:hover{
+    background-color: white; 
+    color: white;
+    border: none;
+    cursor: default;
+}

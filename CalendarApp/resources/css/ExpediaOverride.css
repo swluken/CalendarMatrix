@@ -1,0 +1,266 @@
+.matrix-ex6-cal .x-datepicker {
+  position: relative; }
+  .matrix-ex6-cal .x-datepicker .x-monthpicker {
+    left: 0;
+    top: 0;
+    display: block; }
+  .matrix-ex6-cal .x-datepicker .x-monthpicker-months,
+  .matrix-ex6-cal .x-datepicker .x-monthpicker-years {
+    height: 100%; }
+
+.matrix-ex6-cal .x-datepicker-inner {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate; }
+
+.matrix-ex6-cal .x-datepicker-cell {
+  padding: 0; }
+
+.matrix-ex6-cal .x-datepicker-header {
+  position: relative; }
+
+.matrix-ex6-cal .x-datepicker-arrow {
+  position: absolute;
+  outline: none;
+  font-size: 0px; }
+
+.matrix-ex6-cal .x-datepicker-column-header {
+  padding: 0px; }
+
+.matrix-ex6-cal .x-datepicker-date {
+  display: block;
+  text-decoration: none; }
+
+.matrix-ex6-cal .x-monthpicker {
+  display: table; }
+
+.matrix-ex6-cal .x-monthpicker-body {
+  height: 100%;
+  position: relative; }
+
+.matrix-ex6-cal .x-monthpicker-months,
+.matrix-ex6-cal .x-monthpicker-years {
+  float: left; }
+
+.matrix-ex6-cal .x-monthpicker-item {
+  float: left; }
+
+.matrix-ex6-cal .x-monthpicker-item-inner {
+  display: block;
+  text-decoration: none; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-button-ct {
+  float: left;
+  text-align: center; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-button {
+  display: inline-block;
+  outline: none;
+  font-size: 0px; }
+
+.matrix-ex6-cal .x-monthpicker-buttons {
+  width: 100%; }
+
+.matrix-ex6-cal .x-datepicker .x-monthpicker-buttons {
+  position: absolute;
+  bottom: 0; }
+
+.matrix-ex6-cal .x-datepicker-header {
+  padding: 4px 6px;
+  text-align: center;
+  background-image: none;
+  background-color: white; }
+
+.matrix-ex6-cal .x-datepicker-arrow {
+  width: 12px;
+  height: 12px;
+  top: 9px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7; }
+
+.matrix-ex6-cal div.x-datepicker-arrow:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.matrix-ex6-cal .matrix-ex6-cal .x-datepicker-next {
+  background: none; }
+
+.matrix-ex6-cal .matrix-ex6-cal .x-datepicker-prev {
+  background: none; }
+
+.matrix-ex6-cal .x-datepicker-month .x-btn,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-tc,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-tl,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-tr,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-mc,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-ml,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-mr,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-bc,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-bl,
+.matrix-ex6-cal .x-datepicker-month .x-btn .x-btn-br {
+  background: transparent;
+  border-width: 0px !important; }
+.matrix-ex6-cal .x-datepicker-month .x-btn-inner {
+  color: #3892d3; }
+.matrix-ex6-cal .x-datepicker-month .x-btn-split-right:after, .matrix-ex6-cal .x-datepicker-month .x-btn-over .x-btn-split-right:after {
+  background-image: none; }
+.matrix-ex6-cal .x-datepicker-month .x-btn-over {
+  border-color: transparent; }
+
+.matrix-ex6-cal .x-datepicker-column-header {
+  width: 30px;
+  color: #999999;
+  font: bold 13px 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  text-align: center;
+  background-image: none;
+  background-color: white; }
+
+.matrix-ex6-cal .x-datepicker-column-header-inner {
+  line-height: 18px;
+  padding: 0px; }
+
+.matrix-ex6-cal .x-datepicker-cell {
+  text-align: center; }
+
+.matrix-ex6-cal .x-datepicker-date {
+  padding: 0px;
+  font: normal 13px 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  color: #0065b8;
+  cursor: pointer;
+  line-height: 30px; }
+
+.matrix-ex6-cal div.x-datepicker-date:hover {
+  color: #0065b8;
+  background-color: #0087f5; }
+
+.matrix-ex6-cal .x-datepicker-selected {
+  border-style: solid;
+  border-color: #3892d3; }
+  .matrix-ex6-cal .x-datepicker-selected .x-datepicker-date {
+    background-color: #d1eaff;
+    font-weight: bold; }
+
+.matrix-ex6-cal .x-datepicker-today {
+  border-color: white;
+  border-style: solid; }
+
+.matrix-ex6-cal .x-datepicker-prevday .x-datepicker-date,
+.matrix-ex6-cal .x-datepicker-nextday .x-datepicker-date {
+  color: white; }
+
+.matrix-ex6-cal .x-datepicker-disabled .x-datepicker-date {
+  background-color: white;
+  cursor: default;
+  color: #cacaca; }
+
+.matrix-ex6-cal .x-datepicker-disabled div.x-datepicker-date:hover {
+  background-color: white;
+  color: #cacaca; }
+
+.matrix-ex6-cal .x-datepicker-footer,
+.matrix-ex6-cal .x-monthpicker-buttons {
+  padding: 3px 0;
+  background-image: none;
+  background-color: white;
+  text-align: center; }
+  .matrix-ex6-cal .x-datepicker-footer .x-btn,
+  .matrix-ex6-cal .x-monthpicker-buttons .x-btn {
+    margin: 0px 3px 0px 2px; }
+
+.matrix-ex6-cal .x-monthpicker {
+  width: 216px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #0087f5;
+  background-color: white; }
+
+.matrix-ex6-cal .x-monthpicker-months {
+  border-width: 0px 1px 0px 0px;
+  border-color: #0087f5;
+  border-style: solid;
+  width: 105px; }
+  .matrix-ex6-cal .x-monthpicker-months .x-monthpicker-item {
+    width: 52px; }
+
+.matrix-ex6-cal .x-monthpicker-years {
+  width: 105px; }
+  .matrix-ex6-cal .x-monthpicker-years .x-monthpicker-item {
+    width: 52px; }
+
+.matrix-ex6-cal .x-monthpicker-item {
+  margin: 5px 0 5px;
+  font: normal 13px 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  text-align: center; }
+
+.x-monthpicker-item-inner {
+  margin: 0px 5px 0px 5px;
+  color: black;
+  line-height: 24px;
+  cursor: pointer; }
+
+.matrix-ex6-cal a.x-monthpicker-item-inner:hover {
+  background-color: #0087f5; }
+
+.matrix-ex6-cal .x-monthpicker-selected {
+  background-color: #d1eaff;
+  border-style: solid;
+  border-color: #3892d3; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav {
+  height: 34px; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-button-ct {
+  width: 52px; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-button {
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  margin-top: 11px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-touch-callout: none;
+  background-color: white; }
+
+.matrix-ex6-cal a.x-monthpicker-yearnav-button:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-next {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1MUE2RTg1ODVERjAxMUUyQkQ1MUM3RTlEMzIwQTAwQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1MUE2RTg1OTVERjAxMUUyQkQ1MUM3RTlEMzIwQTAwQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjUxQTZFODU2NURGMDExRTJCRDUxQzdFOUQzMjBBMDBCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUxQTZFODU3NURGMDExRTJCRDUxQzdFOUQzMjBBMDBCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+EawLQgAAAJtJREFUeNpi/P//P8OsWbMYoGA3ELsA8ScgVgbiNwxIIC0tjYGJARWUA/F/IOYD4hoGLABdwzkgXgFlZwKxIiENDFCTfwExGxC3EKPhHhBPh7IjgdiIkAYGqMkgjzMCcQcxGpABIzEaaqAh9R8acng1KEJDCASWQ0MOr4YWaAiBQqqWUCgZQUOGARpS9whp6IR68hO2OAABgAADACQvHRVPAYLGAAAAAElFTkSuQmCC') no-repeat 0 0; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-next-over {
+  background-position: 0 0; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-prev {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1MUE2RTg1QzVERjAxMUUyQkQ1MUM3RTlEMzIwQTAwQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1MUE2RTg1RDVERjAxMUUyQkQ1MUM3RTlEMzIwQTAwQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjUxQTZFODVBNURGMDExRTJCRDUxQzdFOUQzMjBBMDBCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjUxQTZFODVCNURGMDExRTJCRDUxQzdFOUQzMjBBMDBCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mIIeJQAAAJtJREFUeNpi/P//P8OsWbMY0IAIEN8FYj4g3gPEriDBtLQ0BiYG7KAGqvg/EJcjS2DToAjEGVD2ciA+R0hDCxCzA/EvIK5Fl0TXYATEkVD2dCC+R0hDJxAzAvEnIG7F5jlcnmaAepighnKoQj5oSBHUcA4aMiCQCcRKxDipBhpCbEDcTIyG+9AQYoCGmBExnm6BhhQjNOTgACDAAOoRHRXgEQ6EAAAAAElFTkSuQmCC') no-repeat 0 0; }
+
+.matrix-ex6-cal .x-monthpicker-yearnav-prev-over {
+  background-position: 0 0; }
+
+.matrix-ex6-cal .x-monthpicker-small .x-monthpicker-item {
+  margin: 2px 0px 2px; }
+.matrix-ex6-cal .x-monthpicker-small .x-monthpicker-item-inner {
+  margin: 0px 5px 0px 5px; }
+.matrix-ex6-cal .x-monthpicker-small .x-monthpicker-yearnav {
+  height: 28px; }
+.matrix-ex6-cal .x-monthpicker-small .x-monthpicker-yearnav-button {
+  margin-top: 8px; }
+
+/*<if slicer>*/
+.matrix-ex6-cal .x-cmd-slicer.x-datepicker-header:before {
+  display: none;
+  content: "x-slicer:stretch:bottom" !important; }
+
+/*</if slicer>*/
+/* */
+/*<if slicer>*/
+.matrix-ex6-cal .x-cmd-slicer.x-datepicker-footer:before {
+  display: none;
+  content: "x-slicer:stretch:bottom" !important; }
+
+/*</if slicer>*/
+/* */
